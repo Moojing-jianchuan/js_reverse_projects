@@ -1,0 +1,9 @@
+.env
+.env.*
+*.log
+auth.json
+*secrets*.json
+__pycache__/
+*.pyc
+venv/
+node_modules/
