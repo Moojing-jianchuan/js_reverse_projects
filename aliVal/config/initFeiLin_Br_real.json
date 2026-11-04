@@ -1,0 +1,32 @@
+{
+  "prefix": "1sfr0c",
+  "region": "cn",
+  "appName": "saf-captcha",
+  "appKey": "ab034ec0643f91399eb33e062dc7fae1",
+  "endpoints": [
+    "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com",
+    "https://cn-shanghai.device.saf.aliyuncs.com"
+  ],
+  "ENDPOINTS": [
+    "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com",
+    "https://cn-shanghai.device.saf.aliyuncs.com"
+  ],
+  "logs": ["10-0", "11-136", "20-137", "23-258"],
+  "initTime": 1788753270907,
+  "sceneId": "vollz84f",
+  "preCollectData": { "fontsNum": 72 },
+  "DeviceConfig": "zaIQWvDReTrDXTwsIz56dRfMkY9V/dW/p7jnY3CKkrKcnziHIXQq7Ru5TEyHV/aku7khtCnOFsSZsFfmgm2vIK1jWYD77k0gZqhqGHrV5yGQ9S+MQ/ea1ijo7wYvKLHSQsTrmzplP1o6KUt+LDmsOn30/9qQmwLiAmuy6vtZ+O3hnsLJd6IraTTAMghvVtdxHMDjFhgLdHFoFBC7wbddaxZUqyweoU4hG7daSXhbAU8HTpEZ77MWUnwPEqC8P5f8F4/P/EQEGKhTs2tOA7rJx90DXSoG6cWtgbX1qkrMAivmjDOgfKOQ83DovrX7KY4R",
+  "deviceConfig": {
+    "key": "f7074044c9324896",
+    "switch": 1,
+    "sessionId": "ab034ec0643f91399eb33e062dc7fae1-h-1788753271084-4666d585a489415294c2ea0d6d977695",
+    "version": "1.5.1/feilin009.c2e94bf647e1302e42d332d77bc5d6f1e5970d4e79cdd6496b0218667d88bbd2",
+    "pluginElements": "",
+    "pluginResource": "",
+    "globalVariable": "",
+    "timestamp": "1788753271086",
+    "ip": "123.144.102.67"
+  },
+  "timestamp": "1788753271086",
+  "feilinLoad": true
+}

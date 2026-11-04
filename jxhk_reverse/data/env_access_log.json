@@ -1,0 +1,726 @@
+[
+  {
+    "op": "missing-get",
+    "path": "document.addEventListener"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.userAgentData"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.oscpu"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.referrer"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.connection"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.connection"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.brave"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.URL"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.all"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.systemLanguage"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.documentMode"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.browserLanguage"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.characterSet"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.charset"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.userLanguage"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.appName"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.battery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.webkitBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.mozBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.msBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.doNotTrack"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.canShare"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.clearAppBadge"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.deprecatedReplaceInURN"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getAutoplayPolicy"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getGamepads"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getInstalledRelatedApps"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getUserMedia"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getVRDisplays"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.registerProtocolHandler"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.requestMediaKeySystemAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.requestMIDIAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.setAppBadge"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.share"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.taintEnabled"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.unregisterProtocolHandler"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.vibrate"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.adoptNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.append"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.browsingTopics"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.caretPositionFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.caretRangeFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.clear"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.close"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createAttribute"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createAttributeNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createCDATASection"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createComment"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createDocumentFragment"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createElementNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createExpression"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createNodeIterator"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createNSResolver"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createProcessingInstruction"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createRange"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTextNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTouch"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTouchList"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTreeWalker"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.elementFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.elementsFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.enableStyleSheetsForSet"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.evaluate"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.execCommand"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitFullscreen"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitPictureInPicture"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitPointerLock"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getAnimations"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByClassName"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByName"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByTagNameNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getSelection"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasFocus"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasStorageAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasUnpartitionedCook"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.ieAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.importNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.moveBefore"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.mozSetImageElement"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.open"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.prepend"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandEnabled"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandState"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandSupported"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.querySelector"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.querySelectorAll"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.releaseCapture"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.replaceChildren"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.requestStorageAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.requestStorageAccessFor"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.startViewTransition"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.write"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.writeln"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.mediaDevices"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.scripts"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.timeline"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.title"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.appMinorVersion"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.cpuClass"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.appCodeName"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.canShare"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.clearAppBadge"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.deprecatedReplaceInURN"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getAutoplayPolicy"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getBattery"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getGamepads"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getInstalledRelatedApps"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getUserMedia"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.getVRDisplays"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.registerProtocolHandler"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.requestMediaKeySystemAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.requestMIDIAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.setAppBadge"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.share"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.taintEnabled"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.unregisterProtocolHandler"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.vibrate"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.adoptNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.append"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.browsingTopics"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.caretPositionFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.caretRangeFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.clear"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.close"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createAttribute"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createAttributeNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createCDATASection"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createComment"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createDocumentFragment"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createElementNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createExpression"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createNodeIterator"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createNSResolver"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createProcessingInstruction"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createRange"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTextNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTouch"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTouchList"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.createTreeWalker"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.elementFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.elementsFromPoint"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.enableStyleSheetsForSet"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.evaluate"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.execCommand"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitFullscreen"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitPictureInPicture"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.exitPointerLock"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getAnimations"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByClassName"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByName"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getElementsByTagNameNS"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.getSelection"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasFocus"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasStorageAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.hasUnpartitionedCook"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.ieAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.importNode"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.moveBefore"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.mozSetImageElement"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.open"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.prepend"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandEnabled"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandState"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.queryCommandSupported"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.querySelector"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.querySelectorAll"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.releaseCapture"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.replaceChildren"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.requestStorageAccess"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.requestStorageAccessFor"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.startViewTransition"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.write"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.writeln"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.connection"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.connection"
+  },
+  {
+    "op": "missing-get",
+    "path": "navigator.brave"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.URL"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.all"
+  },
+  {
+    "op": "missing-get",
+    "path": "document.images"
+  }
+]

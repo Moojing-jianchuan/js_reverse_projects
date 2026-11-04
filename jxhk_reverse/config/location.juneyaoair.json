@@ -1,0 +1,12 @@
+{
+  "ancestorOrigins": {},
+  "href": "https://www.juneyaoair.com/flightQuery?depCity=%E4%B8%8A%E6%B5%B7-SHA&depAirport=&arrCity=%E5%8C%97%E4%BA%AC-BJS&arrAirport=&depDate=2026-04-19&arrDate=2026-04-18&passType=&routeType=OW",
+  "origin": "https://www.juneyaoair.com",
+  "protocol": "https:",
+  "host": "www.juneyaoair.com",
+  "hostname": "www.juneyaoair.com",
+  "port": "",
+  "pathname": "/flightQuery",
+  "search": "?depCity=%E4%B8%8A%E6%B5%B7-SHA&depAirport=&arrCity=%E5%8C%97%E4%BA%AC-BJS&arrAirport=&depDate=2026-04-19&arrDate=2026-04-18&passType=&routeType=OW",
+  "hash": ""
+}

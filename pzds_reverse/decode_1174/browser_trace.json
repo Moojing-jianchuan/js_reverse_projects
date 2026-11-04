@@ -1,0 +1,30 @@
+{
+  "endpoint": "goodsPublic/page",
+  "method": "post",
+  "url_path": "api.pzds.com/api/web-client/v2/public/goodsPublic/page",
+  "waf_token": "Motxfi67zHY7nzJyf6kX8HRbe7Wj/ENVxxl0CC4Fobw=",
+  "waf_ts": "1779946723930",
+  "body": {"order":"ASC","sort":null,"page":1,"pageSize":10,"action":{"gameId":"7","merchantMark":null,"keywords":[],"searchWords":[],"searchPropertyIds":[],"recommendSearchConfigIds":[],"unionGameIds":[],"goodsSearchActions":[],"metas":{"single1":[]},"goodsCatalogueId":6,"goodsSubCatalogueIds":[],"countFlag":false,"conditionSearch":false}},
+  "aI_encoded": "Motxfi67zHY7nzJyf6kX8HRbe7Wj%2FENVxxl0CC4Fobw%3Dpost214d4f07715api.pzds.com%2Fapi%2Fweb-client%2Fv2%2Fpublic%2FgoodsPublic%2Fpage",
+  "aI_raw": "Motxfi67zHY7nzJyf6kX8HRbe7Wj/ENVxxl0CC4Fobw=post214d4f07715api.pzds.com/api/web-client/v2/public/goodsPublic/page",
+  "ag": {
+    "0": "699973c67a699973",
+    "1": "4a593575264a5935",
+    "2": "75497640",
+    "3": "1779946724384",
+    "4": "Motxfi67zHY7nzJyf6kX8HRbe7Wj/ENVxxl0CC4Fobw=",
+    "5": "1779946723930",
+    "6": "1-s2ZkG7Bqoo4nUmRAH4Re4JXmdDSc9H7v6XropcX6wmgiM3kTFI1iR3HiZboROCyzZolfN6TxzZPe+2S7vNol5c21WVHyvTwfbGSfU5dloQA="
+  },
+  "ag_joined_len": 226,
+  "decodeBody": "/90sjZ/Z/6SXPcCvXdThdihmubmfm8TVpYzIAj/vTZcX/OOy61THtTPsA2CWXRTioTNT/ZX_1TidTqfqp9T1DWTQTmasfTk9TkS/2icTAfC69TK2XeT4fiJT12XF9o2XhkTZ25GTZMDyTRfidPq9hnmToKN2THTP1XTXkefPJoTXiTvRdE/JuTuGTHfZTfsmGXJwGusFCTiZTvfPu7iTDoTXg9PGT0M9TPHTa9T/CT1nJMmXkTiG3Tm_7ofk2ygumAM9/TNv4klumEuaJ5hTI9fOTiJZTpTA6Sbwj86Tq51k1y8GKy9/JAJW8FmdQfaFB3TXCqQXvT",
+  "decodeBody_len": 330,
+  "decodeFull": "214d4f07715-/90sjZ/Z/6SXPcCvXdThdihmubmfm8TVpYzIAj/vTZcX/OOy61THtTPsA2CWXRTioTNT/ZX_1TidTqfqp9T1DWTQTmasfTk9TkS/2icTAfC69TK2XeT4fiJT12XF9o2XhkTZ25GTZMDyTRfidPq9hnmToKN2THTP1XTXkefPJoTXiTvRdE/JuTuGTHfZTfsmGXJwGusFCTiZTvfPu7iTDoTXg9PGT0M9TPHTa9T/CT1nJMmXkTiG3Tm_7ofk2ygumAM9/TNv4klumEuaJ5hTI9fOTiJZTpTA6Sbwj86Tq51k1y8GKy9/JAJW8FmdQfaFB3TXCqQXvT",
+  "lcg": {
+    "total_calls": 65,
+    "first_result": 0.6762341574536077,
+    "last_result": 0.16767249551416177,
+    "stack_common": "q→Object.SRwtQ→j→Object.ltWxy→Object.Bab8TI3lVS",
+    "note": "All 65 calls from w() path (j=Fisher-Yates), a2 calls use separate LCG instance"
+  }
+}

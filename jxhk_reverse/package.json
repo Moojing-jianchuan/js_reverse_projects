@@ -1,0 +1,26 @@
+{
+  "name": "jxhk_reverse",
+  "version": "1.0.0",
+  "description": "吉祥航空 jxhk 同盾 TrustDecision 补环境、sign / blackBox 与接口示例",
+  "scripts": {
+    "td-sign": "node scripts/td/run_td_sign.js",
+    "td-sign:dump": "node scripts/td/run_td_sign.js --dump",
+    "td-blackbox": "node scripts/td/run_td_blackbox.js --location config/location.juneyaoair.json",
+    "build:deob": "node tools/build_deob_final.js",
+    "example:juneyao-flight": "python test.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.29.1",
+    "@babel/parser": "^7.29.2",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
+    "acorn": "^8.16.0",
+    "acorn-walk": "^8.3.5",
+    "prettier": "^3.8.3",
+    "ts-node": "^10.9.2"
+  },
+  "description": ""
+}

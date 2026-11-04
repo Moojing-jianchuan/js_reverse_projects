@@ -1,0 +1,2973 @@
+===== ENV FILL LOG START =====
+time=2026-06-01T01:51:28.749Z
+cwd=d:\downloads\cache\js_reverse\pzds_reverse\ssxmod
+node=v22.14.0
+workflow=env_patch.js -> env_fill.js -> 1.js
+
+[ENV-FILL-ROOT] monitoring document
+[ENV-FILL-ROOT] monitoring navigator
+[ENV-FILL-ROOT] monitoring location
+[ENV-FILL-ROOT] monitoring screen
+[ENV-FILL-ROOT] monitoring history
+[ENV-FILL-ROOT] monitoring localStorage
+[ENV-FILL-ROOT] monitoring sessionStorage
+[ENV-FILL-ROOT] monitoring performance
+[ENV-FILL-ROOT] monitoring crypto
+[ENV-FILL-ROOT] monitoring Image
+[ENV-FILL-ROOT-MISSING] Audio
+[ENV-FILL-ROOT] monitoring XMLHttpRequest
+[ENV-FILL-ROOT] monitoring fetch
+[ENV-FILL-MISSING] performance.markResourceTiming => undefined
+[ENV-FILL-ROOT] monitoring Headers
+[ENV-FILL-ROOT] monitoring Request
+[ENV-FILL-ROOT] monitoring Response
+[ENV-FILL-ROOT] monitoring URL
+[ENV-FILL-ROOT] monitoring URLSearchParams
+[ENV-FILL-ROOT] monitoring Blob
+[ENV-FILL-ROOT] monitoring File
+[ENV-FILL-ROOT-MISSING] FileReader
+[ENV-FILL-ROOT] monitoring FormData
+[ENV-FILL-ROOT-MISSING] DOMParser
+[ENV-FILL-ROOT-MISSING] XMLSerializer
+[ENV-FILL-ROOT] monitoring MutationObserver
+[ENV-FILL-ROOT] monitoring ResizeObserver
+[ENV-FILL-ROOT] monitoring IntersectionObserver
+[ENV-FILL-ROOT] monitoring Event
+[ENV-FILL-ROOT] monitoring CustomEvent
+[ENV-FILL-ROOT] monitoring MouseEvent
+[ENV-FILL-ROOT] monitoring KeyboardEvent
+[ENV-FILL-ROOT] monitoring TouchEvent
+[ENV-FILL-ROOT] monitoring EventTarget
+[ENV-FILL-ROOT] monitoring HTMLElement
+[ENV-FILL-ROOT] monitoring Element
+[ENV-FILL-ROOT] monitoring Node
+[ENV-FILL-ROOT] monitoring Document
+[ENV-FILL-ROOT] monitoring HTMLDocument
+[ENV-FILL-ROOT] monitoring HTMLCanvasElement
+[ENV-FILL-ROOT] monitoring CanvasRenderingContext2D
+[ENV-FILL-ROOT] monitoring WebGLRenderingContext
+[ENV-FILL-ROOT-MISSING] WebGL2RenderingContext
+[ENV-FILL-ROOT-MISSING] Storage
+[ENV-FILL-ROOT-MISSING] Location
+[ENV-FILL-ROOT] monitoring Navigator
+[ENV-FILL-ROOT-MISSING] PluginArray
+[ENV-FILL-ROOT-MISSING] MimeTypeArray
+[ENV-FILL-ROOT-MISSING] Plugin
+[ENV-FILL-ROOT-MISSING] MimeType
+[ENV-FILL-ROOT-MISSING] CSS
+[ENV-FILL-ROOT] monitoring chrome
+[ENV-FILL-ROOT] monitoring speechSynthesis
+[ENV-FILL-ROOT] monitoring indexedDB
+[ENV-FILL-ROOT-MISSING] openDatabase
+[ENV-FILL-ROOT-MISSING] Notification
+[ENV-FILL-ROOT-MISSING] Worker
+[ENV-FILL-ROOT-MISSING] SharedWorker
+[ENV-FILL-ROOT] monitoring requestAnimationFrame
+[ENV-FILL-ROOT] monitoring cancelAnimationFrame
+[ENV-FILL-ROOT] monitoring requestIdleCallback
+[ENV-FILL-ROOT] monitoring cancelIdleCallback
+[ENV-FILL-ROOT] monitoring setTimeout
+[ENV-FILL-ROOT] monitoring setInterval
+[ENV-FILL-ROOT] monitoring clearTimeout
+[ENV-FILL-ROOT] monitoring clearInterval
+[ENV-FILL-ROOT] monitoring atob
+[ENV-FILL-ROOT] monitoring btoa
+[ENV-FILL-ROOT] monitoring TextEncoder
+[ENV-FILL-ROOT] monitoring TextDecoder
+[ENV-FILL-ROOT] monitoring getComputedStyle
+[ENV-FILL-ROOT] monitoring matchMedia
+[ENV-FILL-WINDOW-SCALAR] monitoring window.innerWidth
+[ENV-FILL-WINDOW-SCALAR] monitoring window.innerHeight
+[ENV-FILL-WINDOW-SCALAR] monitoring window.outerWidth
+[ENV-FILL-WINDOW-SCALAR] monitoring window.outerHeight
+[ENV-FILL-WINDOW-SCALAR] monitoring window.devicePixelRatio
+[ENV-FILL-WINDOW-SCALAR] monitoring window.screenX
+[ENV-FILL-WINDOW-SCALAR] monitoring window.screenY
+[ENV-FILL-WINDOW-SCALAR] monitoring window.screenLeft
+[ENV-FILL-WINDOW-SCALAR] monitoring window.screenTop
+[ENV-FILL-WINDOW-SCALAR] monitoring window.pageXOffset
+[ENV-FILL-WINDOW-SCALAR] monitoring window.pageYOffset
+[ENV-FILL-WINDOW-SCALAR] monitoring window.scrollX
+[ENV-FILL-WINDOW-SCALAR] monitoring window.scrollY
+[ENV-FILL-WINDOW-SCALAR] monitoring window.name
+[ENV-FILL-WINDOW-SCALAR] monitoring window.status
+[ENV-FILL-WINDOW-SCALAR] monitoring window.closed
+[ENV-FILL-WINDOW-SCALAR] monitoring window.opener
+[ENV-FILL-WINDOW-SCALAR] monitoring window.length
+[ENV-FILL-WINDOW-SCALAR] monitoring window.origin
+[ENV-FILL-WINDOW-SCALAR] monitoring window.isSecureContext
+[ENV-FILL] diagnostics installed. Log file: D:\downloads\cache\js_reverse\pzds_reverse\ssxmod\env_log.txt
+[ENV-FILL] workflow: env_patch.js -> env_fill.js -> 1.js
+[ENV-FILL-GET] navigator.userAgent => string "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[ENV-FILL-GET] document.currentScript => object [object Object]
+[ENV-FILL-GET] document.currentScript.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("xdomain")
+[ENV-FILL-GET] document.currentScript.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("docReferer")
+[ENV-FILL-GET] document.currentScript.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("captchaType")
+[ENV-FILL-GET] document.currentScript.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("clientSignal")
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-MISSING] document.documentElement.doScroll => undefined
+[ENV-FILL-GET] document.readyState => string "complete"
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("DOMContentLoaded", [Function kM], false)
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("script")
+[ENV-FILL-SET] document.createElement().text <= string "window.aliyun_csp_inline_test = 1;aliyun_csp_inline_test_func()"
+[ENV-FILL-SET] document.createElement()._text <= string "window.aliyun_csp_inline_test = 1;aliyun_csp_inline_test_func()"
+[ENV-FILL-DESC] document.createElement()._text => found
+[ENV-FILL-GET] document.createElement()._text => string "window.aliyun_csp_inline_test = 1;aliyun_csp_inline_test_func()"
+[ENV-FILL-SET] document.createElement().textContent <= string "window.aliyun_csp_inline_test = 1;aliyun_csp_inline_test_func()"
+[ENV-FILL-DESC] document.createElement().textContent => found
+[ENV-FILL-GET] document.head => object [object Object]
+[ENV-FILL-GET] document.head.childNodes => object [object Array]
+[ENV-FILL-MISSING] document.head.childNodes.0 => undefined
+[ENV-FILL-GET] document.head.firstChild => object null
+[ENV-FILL-GET] document.head.insertBefore => function [Function insertBefore]
+[ENV-FILL-CALL] document.head.insertBefore ([object Object], null)
+[ENV-FILL-CALL] setTimeout ([Function anonymous], 200)
+[ENV-FILL-GET] navigator.maxTouchPoints => number 0
+[ENV-FILL-GET] document.location => object [object Location]
+[ENV-FILL-GET] location.host => string "www.pzds.com"
+[ENV-FILL-GET] document.location => object [object Location]
+[ENV-FILL-GET] location.host => string "www.pzds.com"
+[ENV-FILL-SET] document.cookie <= string "_aliyunwaf_test_cookie=test; domain=.pzds.com; path=/"
+[ENV-FILL-COOKIE-SET] key=_aliyunwaf_test_cookie valueLen=4 preview=test
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-SET] document.cookieStore._aliyunwaf_test_cookie <= string "test"
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => missing
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => found
+[ENV-FILL-GET] document.cookieStore._aliyunwaf_test_cookie => string "test"
+[ENV-FILL-GET] document.cookie => string "_aliyunwaf_test_cookie=test"
+[ENV-FILL-SET] document.cookie <= string "_aliyunwaf_test_cookie=; domain=.pzds.com; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"
+[ENV-FILL-COOKIE-SET] key=_aliyunwaf_test_cookie valueLen=0 preview=
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-SET] document.cookieStore._aliyunwaf_test_cookie <= string ""
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => found
+[ENV-FILL-GET] speechSynthesis.getVoices => function [Function getVoices]
+[ENV-FILL-GET] localStorage.setItem => function [Function setItem]
+[ENV-FILL-CALL] localStorage.setItem ("aliyun_waf_testLocalStorage", "aliyun_waf_testLocalStorage")
+[ENV-FILL-STORAGE-SET] localStorage.setItem key=aliyun_waf_testLocalStorage valueLen=27 preview=aliyun_waf_testLocalStorage
+[ENV-FILL-GET] localStorage.removeItem => function [Function removeItem]
+[ENV-FILL-CALL] localStorage.removeItem ("aliyun_waf_testLocalStorage")
+[ENV-FILL-GET] localStorage.getItem => function [Function getItem]
+[ENV-FILL-CALL] localStorage.getItem ("__00b204e9800998__")
+[ENV-FILL-GET] localStorage.setItem => function [Function setItem]
+[ENV-FILL-CALL] localStorage.setItem ("__00b204e9800998__", "2034182722a19e80e0fc3d||1795830688845")
+[ENV-FILL-STORAGE-SET] localStorage.setItem key=__00b204e9800998__ valueLen=37 preview=2034182722a19e80e0fc3d||1795830688845
+[ENV-FILL-GET] document.getElementById => function [Function getElementById]
+[ENV-FILL-CALL] document.getElementById ("aliyun_waf_fa9faf9f45")
+[ENV-FILL-CALL] setInterval ([Function anonymous], 5000)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("mousedown", [Function A5], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("mouseup", [Function A5], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("mousemove", [Function anonymous], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("touchmove", [Function anonymous], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("touchstart", [Function Gt], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("touchend", [Function Gt], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("keyup", [Function GQ], true)
+[ENV-FILL-GET] document.hidden => boolean false
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("visibilitychange", [Function anonymous], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("compositionend", [Function anonymous], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("paste", [Function anonymous], true)
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-GET] document.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] document.addEventListener ("click", [Function anonymous], true)
+[ENV-FILL-CALL] setInterval ([Function anonymous], 5000)
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("cc")
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-GET] document.createElement().style.zoom => string ""
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-GET] document.createElement().style.resize => string ""
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-GET] document.createElement().style.text-rendering => string ""
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-GET] document.createElement().style.text-align-last => string ""
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-MISSING] document.createElement().style.-webkit-hyphens => undefined
+[ENV-FILL-GET] navigator.language => string "en-US"
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("canvas")
+[ENV-FILL-GET] document.createElement().getAttributeNames => function [Function getAttributeNames]
+[ENV-FILL-GET] performance.timeOrigin => number 1780278687507
+[ENV-FILL-GET] document.wasDiscarded => boolean false
+[ENV-FILL-GET] performance.getEntries => function [Function getEntries]
+[ENV-FILL-GET] document.currentScript.src => string "https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js"
+[ENV-FILL-CALL] performance.getEntries ("https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js")
+[ENV-FILL-GET] performance.getEntries().length => number 1
+[ENV-FILL-GET] HTMLDocument.prototype => object [object Object]
+[ENV-FILL-GET] screen.width => number 1920
+[ENV-FILL-GET] screen.height => number 1080
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 10001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 8001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 6001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 4001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1751px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1876px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1877px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1908px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1909px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1917px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1921px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1918px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 10001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 8001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 6001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 4001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1251px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1251px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1064px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1064px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1080px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1088px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1081px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1074px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1081px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1078px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-GET] history.length => number 2
+[ENV-FILL-GET] navigator.platform => string "Win32"
+[ENV-FILL-GET] navigator.hardwareConcurrency => number 8
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("canvas")
+[ENV-FILL-GET] document.createElement().getContext => function [Function getContext]
+[ENV-FILL-GET] document.createElement().getContext => function [Function getContext]
+[ENV-FILL-CALL] document.createElement().getContext ("webgl")
+[ENV-FILL-GET] document.createElement().getContext().getExtension => function [Function getExtension]
+[ENV-FILL-CALL] document.createElement().getContext().getExtension ("WEBGL_debug_renderer_info")
+[ENV-FILL-GET] document.createElement().getContext().getParameter => function [Function getParameter]
+[ENV-FILL-GET] document.createElement().getContext().getExtension().UNMASKED_VENDOR_WEBGL => number 37445
+[ENV-FILL-CALL] document.createElement().getContext().getParameter (37445)
+[ENV-FILL-GET] document.createElement().getContext().getParameter => function [Function getParameter]
+[ENV-FILL-GET] document.createElement().getContext().getExtension().UNMASKED_RENDERER_WEBGL => number 37446
+[ENV-FILL-CALL] document.createElement().getContext().getParameter (37446)
+[ENV-FILL-GET] screen.colorDepth => number 24
+[ENV-FILL-GET] screen.pixelDepth => number 24
+[ENV-FILL-MISSING] navigator.oscpu => undefined
+[ENV-FILL-GET] navigator.plugins => object [object PluginArray]
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.name => string "PDF Viewer"
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.filename => string "internal-pdf-viewer"
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-MISSING] navigator.plugins.0.version => undefined
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.length => number 2
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.0 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.0.type => string "application/pdf"
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.length => number 2
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.1 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.1.type => string "text/pdf"
+[ENV-FILL-GET] navigator.plugins.0 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.0.length => number 2
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.name => string "Chrome PDF Viewer"
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.filename => string "internal-pdf-viewer"
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-MISSING] navigator.plugins.1.version => undefined
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.length => number 2
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.0 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.0.type => string "application/pdf"
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.length => number 2
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.1 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.1.type => string "text/pdf"
+[ENV-FILL-GET] navigator.plugins.1 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.1.length => number 2
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.name => string "Chromium PDF Viewer"
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.filename => string "internal-pdf-viewer"
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-MISSING] navigator.plugins.2.version => undefined
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.length => number 2
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.0 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.0.type => string "application/pdf"
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.length => number 2
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.1 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.1.type => string "text/pdf"
+[ENV-FILL-GET] navigator.plugins.2 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.2.length => number 2
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.name => string "Microsoft Edge PDF Viewer"
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.filename => string "internal-pdf-viewer"
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-MISSING] navigator.plugins.3.version => undefined
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.length => number 2
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.0 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.0.type => string "application/pdf"
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.length => number 2
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.1 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.1.type => string "text/pdf"
+[ENV-FILL-GET] navigator.plugins.3 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.3.length => number 2
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.name => string "WebKit built-in PDF"
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.filename => string "internal-pdf-viewer"
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-MISSING] navigator.plugins.4.version => undefined
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.length => number 2
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.0 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.0.type => string "application/pdf"
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.length => number 2
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.1 => object [object MimeType]
+[ENV-FILL-GET] navigator.plugins.0.1.type => string "text/pdf"
+[ENV-FILL-GET] navigator.plugins.4 => object [object Plugin]
+[ENV-FILL-GET] navigator.plugins.4.length => number 2
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] navigator.plugins.length => number 5
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("canvas")
+[ENV-FILL-GET] document.createElement().getContext => function [Function getContext]
+[ENV-FILL-GET] document.createElement().getContext => function [Function getContext]
+[ENV-FILL-CALL] document.createElement().getContext ("2d")
+[ENV-FILL-SET] document.createElement().height <= number 60
+[ENV-FILL-DESC] document.createElement().height => found
+[ENV-FILL-SET] document.createElement().width <= number 400
+[ENV-FILL-DESC] document.createElement().width => found
+[ENV-FILL-GET] document.createElement().style => object [object Object]
+[ENV-FILL-SET] document.createElement().style.display <= string "inline"
+[ENV-FILL-DESC] document.createElement().style.display => found
+[ENV-FILL-SET] document.createElement().getContext().textBaseline <= string "alphabetic"
+[ENV-FILL-DESC] document.createElement().getContext().textBaseline => found
+[ENV-FILL-SET] document.createElement().getContext().fillStyle <= string "#f60"
+[ENV-FILL-DESC] document.createElement().getContext().fillStyle => found
+[ENV-FILL-GET] document.createElement().getContext().fillRect => function [Function fillRect]
+[ENV-FILL-CALL] document.createElement().getContext().fillRect (125, 1, 62, 20)
+[ENV-FILL-SET] document.createElement().getContext().fillStyle <= string "#069"
+[ENV-FILL-DESC] document.createElement().getContext().fillStyle => found
+[ENV-FILL-SET] document.createElement().getContext().font <= string "11pt no-real-font-123"
+[ENV-FILL-DESC] document.createElement().getContext().font => found
+[ENV-FILL-GET] document.createElement().getContext().fillText => function [Function fillText]
+[ENV-FILL-CALL] document.createElement().getContext().fillText ("Cwm fjordbank glyphs vext quiz, 😃", 2, 15)
+[ENV-FILL-SET] document.createElement().getContext().fillStyle <= string "rgba(102, 204, 0, 0.7)"
+[ENV-FILL-DESC] document.createElement().getContext().fillStyle => found
+[ENV-FILL-SET] document.createElement().getContext().font <= string "18pt Arial"
+[ENV-FILL-DESC] document.createElement().getContext().font => found
+[ENV-FILL-GET] document.createElement().getContext().fillText => function [Function fillText]
+[ENV-FILL-CALL] document.createElement().getContext().fillText ("Cwm fjordbank glyphs vext quiz, 😃", 4, 45)
+[ENV-FILL-GET] document.createElement().toDataURL => function [Function toDataURL]
+[ENV-FILL-CALL] document.createElement().toDataURL ()
+[ENV-FILL-GET] navigator.userAgent => string "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[ENV-FILL-GET] document.hidden => boolean false
+[ENV-FILL-MISSING] document.mozHidden => undefined
+[ENV-FILL-GET] screen.availWidth => number 1920
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement.getAttribute => function [Function getAttribute]
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("webdriver")
+[ENV-FILL-DESC] document.__listeners__ => found
+[ENV-FILL-DESC] document.childNodes => found
+[ENV-FILL-DESC] document.parentNode => found
+[ENV-FILL-DESC] document.nodeType => found
+[ENV-FILL-DESC] document.nodeName => found
+[ENV-FILL-DESC] document.readyState => found
+[ENV-FILL-DESC] document.visibilityState => found
+[ENV-FILL-DESC] document.hidden => found
+[ENV-FILL-DESC] document.wasDiscarded => found
+[ENV-FILL-DESC] document.referrer => found
+[ENV-FILL-DESC] document.title => found
+[ENV-FILL-DESC] document.URL => found
+[ENV-FILL-DESC] document.documentURI => found
+[ENV-FILL-DESC] document.location => found
+[ENV-FILL-DESC] document.domain => found
+[ENV-FILL-DESC] document.compatMode => found
+[ENV-FILL-DESC] document.characterSet => found
+[ENV-FILL-DESC] document.charset => found
+[ENV-FILL-DESC] document.cookieStore => found
+[ENV-FILL-DESC] document.documentElement => found
+[ENV-FILL-DESC] document.head => found
+[ENV-FILL-DESC] document.body => found
+[ENV-FILL-DESC] document.currentScript => found
+[ENV-FILL-DESC] document.scripts => found
+[ENV-FILL-DESC] document.fonts => found
+[ENV-FILL-DESC] document._fakeElements => found
+[ENV-FILL-DESC] document.__bhvr_DOMContentLoaded => found
+[ENV-FILL-DESC] document.__bhvr_mousedown => found
+[ENV-FILL-DESC] document.__bhvr_mouseup => found
+[ENV-FILL-DESC] document.__bhvr_mousemove => found
+[ENV-FILL-DESC] document.__bhvr_touchmove => found
+[ENV-FILL-DESC] document.__bhvr_touchstart => found
+[ENV-FILL-DESC] document.__bhvr_touchend => found
+[ENV-FILL-DESC] document.__bhvr_keyup => found
+[ENV-FILL-DESC] document.__bhvr_visibilitychange => found
+[ENV-FILL-DESC] document.__bhvr_compositionend => found
+[ENV-FILL-DESC] document.__bhvr_paste => found
+[ENV-FILL-DESC] document.__bhvr_click => found
+[ENV-FILL-GET] document.__bhvr_DOMContentLoaded => boolean true
+[ENV-FILL-GET] document.__bhvr_mousedown => boolean true
+[ENV-FILL-GET] document.__bhvr_mouseup => boolean true
+[ENV-FILL-GET] document.__bhvr_mousemove => boolean true
+[ENV-FILL-GET] document.__bhvr_touchmove => boolean true
+[ENV-FILL-GET] document.__bhvr_touchstart => boolean true
+[ENV-FILL-GET] document.__bhvr_touchend => boolean true
+[ENV-FILL-GET] document.__bhvr_keyup => boolean true
+[ENV-FILL-GET] document.__bhvr_visibilitychange => boolean true
+[ENV-FILL-GET] document.__bhvr_compositionend => boolean true
+[ENV-FILL-GET] document.__bhvr_paste => boolean true
+[ENV-FILL-GET] document.__bhvr_click => boolean true
+[ENV-FILL-GET] navigator.webdriver => boolean false
+[ENV-FILL-GET] navigator.hasOwnProperty => function [Function hasOwnProperty]
+[ENV-FILL-GET] navigator.hasOwnProperty => function [Function hasOwnProperty]
+[ENV-FILL-CALL] navigator.hasOwnProperty ("webdriver")
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement.getAttribute => function [Function getAttribute]
+[ENV-FILL-CALL] document.currentScript.getAttribute ("selenium")
+[ENV-FILL-GET] navigator.vendor => string "Google Inc."
+[ENV-FILL-MISSING] navigator.brave => undefined
+[ENV-FILL-GET] navigator.plugins => object [object PluginArray]
+[ENV-FILL-GET] navigator.plugins.refresh => function [Function refresh]
+[ENV-FILL-GET] document.currentScript.src => string "https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js"
+[ENV-FILL-MISSING] chrome.runtime => undefined
+[ENV-FILL-GET] speechSynthesis.getVoices.bind => function [Function bind]
+[ENV-FILL-CALL] speechSynthesis.getVoices.bind ([object Object])
+[ENV-FILL-CALL] speechSynthesis.getVoices.bind() ()
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0.voiceURI => string "Microsoft Huihui - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0.lang => string "zh-CN"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0.name => string "Microsoft Huihui - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().0.name => string "Microsoft Huihui - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1.voiceURI => string "Microsoft Kangkang - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1.lang => string "zh-CN"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1.name => string "Microsoft Kangkang - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().1.name => string "Microsoft Kangkang - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2.voiceURI => string "Microsoft Yaoyao - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2.lang => string "zh-CN"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2.name => string "Microsoft Yaoyao - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().2.name => string "Microsoft Yaoyao - Chinese (Simplified, PRC)"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3.voiceURI => string "Google Deutsch"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3.lang => string "de-DE"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3.name => string "Google Deutsch"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().3.name => string "Google Deutsch"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4.voiceURI => string "Google US English"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4.lang => string "en-US"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4.name => string "Google US English"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().4.name => string "Google US English"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5.voiceURI => string "Google UK English Female"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5.lang => string "en-GB"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5.name => string "Google UK English Female"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().5.name => string "Google UK English Female"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6.voiceURI => string "Google UK English Male"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6.lang => string "en-GB"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6.name => string "Google UK English Male"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().6.name => string "Google UK English Male"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7.voiceURI => string "Google español"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7.lang => string "es-ES"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7.name => string "Google español"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().7.name => string "Google español"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8.voiceURI => string "Google español de Estados Unidos"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8.lang => string "es-US"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8.name => string "Google español de Estados Unidos"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().8.name => string "Google español de Estados Unidos"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9.voiceURI => string "Google français"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9.lang => string "fr-FR"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9.name => string "Google français"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().9.name => string "Google français"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10.voiceURI => string "Google हिन्दी"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10.lang => string "hi-IN"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10.name => string "Google हिन्दी"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().10.name => string "Google हिन्दी"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11.voiceURI => string "Google Bahasa Indonesia"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11.lang => string "id-ID"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11.name => string "Google Bahasa Indonesia"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().11.name => string "Google Bahasa Indonesia"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12.voiceURI => string "Google italiano"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12.lang => string "it-IT"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12.name => string "Google italiano"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().12.name => string "Google italiano"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13.voiceURI => string "Google 日本語"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13.lang => string "ja-JP"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13.name => string "Google 日本語"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().13.name => string "Google 日本語"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14.voiceURI => string "Google 한국의"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14.lang => string "ko-KR"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14.name => string "Google 한국의"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().14.name => string "Google 한국의"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15.voiceURI => string "Google Nederlands"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15.lang => string "nl-NL"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15.name => string "Google Nederlands"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().15.name => string "Google Nederlands"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16.voiceURI => string "Google polski"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16.lang => string "pl-PL"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16.name => string "Google polski"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().16.name => string "Google polski"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17.voiceURI => string "Google português do Brasil"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17.lang => string "pt-BR"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17.name => string "Google português do Brasil"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().17.name => string "Google português do Brasil"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18.voiceURI => string "Google русский"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18.lang => string "ru-RU"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18.name => string "Google русский"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().18.name => string "Google русский"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19.voiceURI => string "Google 普通话（中国大陆）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19.lang => string "zh-CN"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19.name => string "Google 普通话（中国大陆）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().19.name => string "Google 普通话（中国大陆）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20.voiceURI => string "Google 粤語（香港）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20.lang => string "zh-HK"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20.name => string "Google 粤語（香港）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().20.name => string "Google 粤語（香港）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21.voiceURI => string "Google 國語（臺灣）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21.lang => string "zh-TW"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21.name => string "Google 國語（臺灣）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21 => object [object Object]
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().21.name => string "Google 國語（臺灣）"
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.getVoices.bind()().length => number 22
+[ENV-FILL-GET] speechSynthesis.addEventListener => function [Function addEventListener]
+[ENV-FILL-CALL] speechSynthesis.addEventListener ("voiceschanged", [Function anonymous])
+[ENV-FILL-GET] navigator.userAgentData => object [object Object]
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.length => number 3
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.0 => object [object Object]
+[ENV-FILL-GET] navigator.userAgentData.brands.0.brand => string "Chromium"
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.length => number 3
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.1 => object [object Object]
+[ENV-FILL-GET] navigator.userAgentData.brands.1.brand => string "Not=A?Brand"
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.length => number 3
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.2 => object [object Object]
+[ENV-FILL-GET] navigator.userAgentData.brands.2.brand => string "Google Chrome"
+[ENV-FILL-GET] navigator.userAgentData.brands => object [object Array]
+[ENV-FILL-GET] navigator.userAgentData.brands.length => number 3
+[ENV-FILL-MISSING] navigator.brave => undefined
+[ENV-FILL-MISSING] navigator.solana => undefined
+[ENV-FILL-GET] document.fonts => object [object Object]
+[ENV-FILL-GET] document.fonts.load => function [Function load]
+[ENV-FILL-CALL] document.fonts.load ("16px \"FKGroteskNeue\"")
+[ENV-FILL-CALL] setTimeout ([Function anonymous], 1000)
+[ENV-FILL-GET] document.getElementById => function [Function getElementById]
+[ENV-FILL-CALL] document.getElementById ("genspark-float-bar")
+[ENV-FILL-MISSING] navigator.genspark => undefined
+[ENV-FILL-GET] document.getElementsByTagName => function [Function getElementsByTagName]
+[ENV-FILL-CALL] document.getElementsByTagName ("script")
+[ENV-FILL-GET] document.getElementsByTagName().length => number 0
+[ENV-FILL-GET] document.getElementsByTagName => function [Function getElementsByTagName]
+[ENV-FILL-CALL] document.getElementsByTagName ("a")
+[ENV-FILL-GET] document.getElementsByTagName().length => number 0
+[ENV-FILL-GET] document.getElementsByTagName => function [Function getElementsByTagName]
+[ENV-FILL-CALL] document.getElementsByTagName ("button")
+[ENV-FILL-GET] document.getElementsByTagName().length => number 0
+[ENV-FILL-GET] document.getElementsByTagName => function [Function getElementsByTagName]
+[ENV-FILL-CALL] document.getElementsByTagName ("input")
+[ENV-FILL-GET] document.getElementsByTagName().length => number 0
+[ENV-FILL-GET] document.getElementsByTagName => function [Function getElementsByTagName]
+[ENV-FILL-CALL] document.getElementsByTagName ("textarea")
+[ENV-FILL-GET] document.getElementsByTagName().length => number 0
+[ENV-FILL-GET] screen.width => number 1920
+[ENV-FILL-GET] screen.height => number 1080
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-GET] document.documentElement => object [object Object]
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 10001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 8001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 6001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 4001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1751px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1876px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1877px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1908px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1939px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1909px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1917px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1924px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1921px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-width: 1918px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 10001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 8001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 6001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 4001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 2001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1501px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1251px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1251px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1001px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1064px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1126px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1064px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1080px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1095px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1088px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1081px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1074px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1081px)")
+[ENV-FILL-GET] matchMedia().matches => boolean false
+[ENV-FILL-CALL] matchMedia ("(min-device-height: 1078px)")
+[ENV-FILL-GET] matchMedia().matches => boolean true
+[ENV-FILL-CALL] setTimeout ([Function anonymous], 1000)
+[ENV-FILL-GET] navigator.hasOwnProperty => function [Function hasOwnProperty]
+[ENV-FILL-CALL] navigator.hasOwnProperty ("webdriver")
+[ENV-FILL-GET] Document.prototype => object [object Object]
+[ENV-FILL-GET] Document.prototype => object [object Object]
+[ENV-FILL-GET] MutationObserver.prototype => object [object Object]
+[ENV-FILL-GET] document.body => object [object Object]
+[ENV-FILL-GET] document.getElementById => function [Function getElementById]
+[ENV-FILL-CALL] document.getElementById ("claude-agent-stop-container")
+[ENV-FILL-GET] localStorage.getItem => function [Function getItem]
+[ENV-FILL-CALL] localStorage.getItem ("_waf_3d7faf79")
+[ENV-FILL-SET] document.cookie <= string "ssxmod_itna=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G...(len=520)"
+[ENV-FILL-COOKIE-SET] key=ssxmod_itna valueLen=447 preview=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4DS0DD9DGp3ynuNXeDEDYp3p4DmDGA3seDgIDDBDD=
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-SET] document.cookieStore.ssxmod_itna <= string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4D...(len=447)"
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna => missing
+[ENV-FILL-SET] document.cookie <= string "ssxmod_itna2=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD;expires=Mon, 01 Jun 2026 02:21:28 GMT;path=/;domain=pzds.com"
+[ENV-FILL-COOKIE-SET] key=ssxmod_itna2 valueLen=101 preview=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-SET] document.cookieStore.ssxmod_itna2 <= string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna2 => missing
+[ENV-FILL-GET] XMLHttpRequest.prototype => object [object Object]
+[ENV-FILL-GET] EventTarget.prototype => object [object Object]
+[ENV-FILL-GET] EventTarget.prototype => object [object Object]
+[ENV-FILL-GET] localStorage.getItem => function [Function getItem]
+[ENV-FILL-CALL] localStorage.getItem ("_waf_bd8ce2ce37")
+[ENV-FILL-GET] EventTarget.prototype => object [object Object]
+[ENV-FILL-GET] EventTarget.prototype => object [object Object]
+[ENV-FILL-SET] XMLHttpRequest._waf_hook <= boolean true
+[ENV-FILL-GET] Request.prototype => object [object Request]
+[ENV-FILL-GET] fetch.bind => function [Function bind]
+[ENV-FILL-CALL] speechSynthesis.getVoices.bind ([object Window])
+[ENV-FILL-GET] navigator.userAgent => string "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[ENV-FILL-GET] navigator.userAgent => string "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[ENV-FILL-GET] location.href => string "https://www.pzds.com/goodsList/7/6"
+[ENV-FILL-GET] document.createElement => function [Function createElement]
+[ENV-FILL-CALL] document.createElement ("div")
+[ENV-FILL-SET] document.createElement().innerHTML <= string "<a></a>"
+[ENV-FILL-SET] document.createElement()._innerHTML <= string "<a></a>"
+[ENV-FILL-DESC] document.createElement()._innerHTML => found
+[ENV-FILL-GET] document.createElement().childNodes => object [object Array]
+[ENV-FILL-SET] document.createElement().childNodes.length <= number 0
+[ENV-FILL-DESC] document.createElement().childNodes.length => found
+[ENV-FILL-GET] URL.prototype => object [object URL]
+[ENV-FILL-GET] document.createElement().appendChild => function [Function appendChild]
+[ENV-FILL-CALL] document.createElement().appendChild ([object Object])
+[ENV-FILL-GET] document.createElement().childNodes => object [object Array]
+[ENV-FILL-GET] document.createElement().childNodes.0 => object [object Object]
+[ENV-FILL-GET] document.createElement().firstChild => object [object Object]
+[ENV-FILL-SET] document.createElement().firstChild.href <= string "https://www.pzds.com/goodsList/7/6"
+[ENV-FILL-SET] document.createElement().appendChild().href <= string "https://www.pzds.com/goodsList/7/6"
+[ENV-FILL-SET] document.createElement().firstChild._href <= string "https://www.pzds.com/goodsList/7/6"
+[ENV-FILL-SET] document.createElement().appendChild()._href <= string "https://www.pzds.com/goodsList/7/6"
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().firstChild._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-GET] document.createElement().appendChild()._updateURL => function [Function _updateURL]
+[ENV-FILL-GET] document.createElement().appendChild()._updateURL.name => string "_updateURL"
+[ENV-FILL-GET] document.createElement().firstChild._updateURL => function [Function _updateURL]
+[ENV-FILL-DESC] document.createElement().appendChild()._updateURL => missing
+[ENV-FILL-DESC] document.createElement().appendChild()._updateURL => missing
+[ENV-FILL-CALL] document.createElement().firstChild._updateURL ()
+[ENV-FILL-CALL] document.createElement().appendChild()._updateURL ()
+[ENV-FILL-GET] URL.prototype => object [object URL]
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-GET] document.createElement()._innerHTML => string "<a></a>"
+[ENV-FILL-GET] document.createElement().innerHTML => string "<a></a>"
+[ENV-FILL-SET] document.createElement().innerHTML <= string "<a></a>"
+[ENV-FILL-SET] document.createElement()._innerHTML <= string "<a></a>"
+[ENV-FILL-DESC] document.createElement()._innerHTML => found
+[ENV-FILL-GET] document.createElement().childNodes => object [object Array]
+[ENV-FILL-SET] document.createElement().childNodes.length <= number 0
+[ENV-FILL-DESC] document.createElement().childNodes.length => found
+[ENV-FILL-GET] URL.prototype => object [object URL]
+[ENV-FILL-GET] document.createElement().appendChild => function [Function appendChild]
+[ENV-FILL-CALL] document.createElement().appendChild ([object Object])
+[ENV-FILL-GET] document.createElement().childNodes => object [object Array]
+[ENV-FILL-GET] document.createElement().childNodes.0 => object [object Object]
+[ENV-FILL-GET] document.createElement().firstChild => object [object Object]
+[ENV-FILL-GET] document.createElement().childNodes => object [object Array]
+[ENV-FILL-GET] document.createElement().childNodes.0 => object [object Object]
+[ENV-FILL-GET] document.createElement().firstChild => object [object Object]
+[ENV-FILL-GET] document.createElement().appendChild()._href => string ""
+[ENV-FILL-GET] document.createElement().firstChild._href => string ""
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-GET] document.createElement().appendChild().href => string ""
+[ENV-FILL-GET] document.createElement().firstChild.href => string ""
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-SET] document.createElement().firstChild.href <= string ""
+[ENV-FILL-SET] document.createElement().appendChild().href <= string ""
+[ENV-FILL-SET] document.createElement().firstChild._href <= string ""
+[ENV-FILL-SET] document.createElement().appendChild()._href <= string ""
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().firstChild._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-GET] document.createElement().appendChild()._updateURL => function [Function _updateURL]
+[ENV-FILL-GET] document.createElement().appendChild()._updateURL.name => string "_updateURL"
+[ENV-FILL-GET] document.createElement().firstChild._updateURL => function [Function _updateURL]
+[ENV-FILL-DESC] document.createElement().appendChild()._updateURL => missing
+[ENV-FILL-DESC] document.createElement().appendChild()._updateURL => missing
+[ENV-FILL-CALL] document.createElement().firstChild._updateURL ()
+[ENV-FILL-CALL] document.createElement().appendChild()._updateURL ()
+[ENV-FILL-GET] URL.prototype => object [object URL]
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-GET] document.createElement().appendChild().protocol => string "https:"
+[ENV-FILL-GET] document.createElement().firstChild.protocol => string "https:"
+[ENV-FILL-DESC] document.createElement().appendChild().protocol => found
+[ENV-FILL-DESC] document.createElement().appendChild().protocol => found
+[ENV-FILL-GET] document.createElement().appendChild().host => string "www.pzds.com"
+[ENV-FILL-GET] document.createElement().firstChild.host => string "www.pzds.com"
+[ENV-FILL-DESC] document.createElement().appendChild().host => found
+[ENV-FILL-DESC] document.createElement().appendChild().host => found
+[ENV-FILL-GET] document.createElement().appendChild().hostname => string "www.pzds.com"
+[ENV-FILL-GET] document.createElement().firstChild.hostname => string "www.pzds.com"
+[ENV-FILL-DESC] document.createElement().appendChild().hostname => found
+[ENV-FILL-DESC] document.createElement().appendChild().hostname => found
+[ENV-FILL-GET] document.createElement().appendChild().port => string ""
+[ENV-FILL-GET] document.createElement().firstChild.port => string ""
+[ENV-FILL-DESC] document.createElement().appendChild().port => found
+[ENV-FILL-DESC] document.createElement().appendChild().port => found
+[ENV-FILL-GET] document.createElement().appendChild().pathname => string "/goodsList/7/6"
+[ENV-FILL-GET] document.createElement().firstChild.pathname => string "/goodsList/7/6"
+[ENV-FILL-DESC] document.createElement().appendChild().pathname => found
+[ENV-FILL-DESC] document.createElement().appendChild().pathname => found
+[ENV-FILL-GET] document.createElement().appendChild().pathname => string "/goodsList/7/6"
+[ENV-FILL-GET] document.createElement().firstChild.pathname => string "/goodsList/7/6"
+[ENV-FILL-DESC] document.createElement().appendChild().pathname => found
+[ENV-FILL-DESC] document.createElement().appendChild().pathname => found
+[ENV-FILL-GET] document.createElement().appendChild().search => string ""
+[ENV-FILL-GET] document.createElement().firstChild.search => string ""
+[ENV-FILL-DESC] document.createElement().appendChild().search => found
+[ENV-FILL-DESC] document.createElement().appendChild().search => found
+[ENV-FILL-GET] document.createElement().appendChild().hash => string ""
+[ENV-FILL-GET] document.createElement().firstChild.hash => string ""
+[ENV-FILL-DESC] document.createElement().appendChild().hash => found
+[ENV-FILL-DESC] document.createElement().appendChild().hash => found
+[ENV-FILL-GET] document.createElement().appendChild()._href => string ""
+[ENV-FILL-GET] document.createElement().firstChild._href => string ""
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-DESC] document.createElement().appendChild()._href => found
+[ENV-FILL-GET] document.createElement().appendChild().href => string ""
+[ENV-FILL-GET] document.createElement().firstChild.href => string ""
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-DESC] document.createElement().appendChild().href => missing
+[ENV-FILL-GET] document.body => object [object Object]
+[ENV-FILL-CALL] setTimeout ([Function anonymous], 1500)
+[ENV-FILL-GET] document.createElement().parentNode => object [object Object]
+[ENV-FILL-GET] document.head.removeChild => function [Function removeChild]
+[ENV-FILL-CALL] document.head.removeChild ([object Object])
+[ENV-FILL-GET] document.getElementById => function [Function getElementById]
+[ENV-FILL-CALL] document.getElementById ("genspark-float-bar")
+[ENV-FILL-MISSING] navigator.genspark => undefined
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => found
+[ENV-FILL-GET] document.cookieStore._aliyunwaf_test_cookie => string ""
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4D...(len=447)"
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna2 => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna2 => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+[ENV-FILL-GET] document.cookie => string "_aliyunwaf_test_cookie=; ssxmod_itna=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKA...(len=600)"
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => found
+[ENV-FILL-GET] document.cookieStore._aliyunwaf_test_cookie => string ""
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4D...(len=447)"
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna2 => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna2 => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+[ENV-FILL-GET] document.cookie => string "_aliyunwaf_test_cookie=; ssxmod_itna=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKA...(len=600)"
+[ENV-FILL-GET] document.cookieStore => object [object Object]
+[ENV-FILL-DESC] document.cookieStore._aliyunwaf_test_cookie => found
+[ENV-FILL-GET] document.cookieStore._aliyunwaf_test_cookie => string ""
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4D...(len=447)"
+[ENV-FILL-DESC] document.cookieStore.ssxmod_itna2 => found
+[ENV-FILL-GET] document.cookieStore.ssxmod_itna2 => string "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+[ENV-FILL-GET] document.cookie => string "_aliyunwaf_test_cookie=; ssxmod_itna=1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKA...(len=600)"
+[ENV-FILL-GET] localStorage._dump => function [Function _dump]
+[ENV-FILL-GET] localStorage._dump => function [Function _dump]
+[ENV-FILL-CALL] localStorage._dump ()
+[ENV-FILL-MISSING] localStorage._dump().toJSON => undefined
+[ENV-FILL-DESC] localStorage._dump().__00b204e9800998__ => found
+[ENV-FILL-GET] localStorage._dump().__00b204e9800998__ => string "2034182722a19e80e0fc3d||1795830688845"
+[ENV-FILL-GET] sessionStorage._dump => function [Function _dump]
+[ENV-FILL-GET] sessionStorage._dump => function [Function _dump]
+[ENV-FILL-CALL] localStorage._dump ()
+[ENV-FILL-MISSING] localStorage._dump().toJSON => undefined
+
+===== ENV FILL SUMMARY =====
+reason=run_result
+{
+  "logPath": "D:\\downloads\\cache\\js_reverse\\pzds_reverse\\ssxmod\\env_log.txt",
+  "missing": [
+    {
+      "path": "navigator.brave",
+      "count": 2
+    },
+    {
+      "path": "navigator.genspark",
+      "count": 2
+    },
+    {
+      "path": "localStorage._dump().toJSON",
+      "count": 2
+    },
+    {
+      "path": "performance.markResourceTiming",
+      "count": 1
+    },
+    {
+      "path": "document.documentElement.doScroll",
+      "count": 1
+    },
+    {
+      "path": "document.head.childNodes.0",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().style.-webkit-hyphens",
+      "count": 1
+    },
+    {
+      "path": "navigator.oscpu",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.0.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.1.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.2.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.3.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.4.version",
+      "count": 1
+    },
+    {
+      "path": "document.mozHidden",
+      "count": 1
+    },
+    {
+      "path": "chrome.runtime",
+      "count": 1
+    },
+    {
+      "path": "navigator.solana",
+      "count": 1
+    }
+  ],
+  "set": [
+    {
+      "path": "document.cookie",
+      "count": 4
+    },
+    {
+      "path": "document.createElement().getContext().fillStyle",
+      "count": 3
+    },
+    {
+      "path": "document.cookieStore._aliyunwaf_test_cookie",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().font",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().innerHTML",
+      "count": 2
+    },
+    {
+      "path": "document.createElement()._innerHTML",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().childNodes.length",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild.href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild().href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild._href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild()._href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().text",
+      "count": 1
+    },
+    {
+      "path": "document.createElement()._text",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().textContent",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().height",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().width",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().style.display",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().textBaseline",
+      "count": 1
+    },
+    {
+      "path": "document.cookieStore.ssxmod_itna",
+      "count": 1
+    },
+    {
+      "path": "document.cookieStore.ssxmod_itna2",
+      "count": 1
+    },
+    {
+      "path": "XMLHttpRequest._waf_hook",
+      "count": 1
+    }
+  ],
+  "call": [
+    {
+      "path": "matchMedia",
+      "count": 114
+    },
+    {
+      "path": "document.addEventListener",
+      "count": 12
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "count": 6
+    },
+    {
+      "path": "document.createElement",
+      "count": 6
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "count": 5
+    },
+    {
+      "path": "setTimeout",
+      "count": 4
+    },
+    {
+      "path": "document.getElementById",
+      "count": 4
+    },
+    {
+      "path": "localStorage.getItem",
+      "count": 3
+    },
+    {
+      "path": "localStorage.setItem",
+      "count": 2
+    },
+    {
+      "path": "setInterval",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "count": 2
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "count": 2
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "count": 2
+    },
+    {
+      "path": "localStorage._dump",
+      "count": 2
+    },
+    {
+      "path": "document.head.insertBefore",
+      "count": 1
+    },
+    {
+      "path": "localStorage.removeItem",
+      "count": 1
+    },
+    {
+      "path": "performance.getEntries",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().getExtension",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().fillRect",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().toDataURL",
+      "count": 1
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind()",
+      "count": 1
+    },
+    {
+      "path": "speechSynthesis.addEventListener",
+      "count": 1
+    },
+    {
+      "path": "document.fonts.load",
+      "count": 1
+    },
+    {
+      "path": "document.head.removeChild",
+      "count": 1
+    }
+  ],
+  "error": [],
+  "rootMissing": {
+    "Audio": 1,
+    "FileReader": 1,
+    "DOMParser": 1,
+    "XMLSerializer": 1,
+    "WebGL2RenderingContext": 1,
+    "Storage": 1,
+    "Location": 1,
+    "PluginArray": 1,
+    "MimeTypeArray": 1,
+    "Plugin": 1,
+    "MimeType": 1,
+    "CSS": 1,
+    "openDatabase": 1,
+    "Notification": 1,
+    "Worker": 1,
+    "SharedWorker": 1
+  },
+  "cookieSets": [
+    {
+      "key": "_aliyunwaf_test_cookie",
+      "valueLength": 4,
+      "preview": "test"
+    },
+    {
+      "key": "_aliyunwaf_test_cookie",
+      "valueLength": 0,
+      "preview": ""
+    },
+    {
+      "key": "ssxmod_itna",
+      "valueLength": 447,
+      "preview": "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4DS0DD9DGp3ynuNXeDEDYp3p4DmDGA3seDgIDDBDD="
+    },
+    {
+      "key": "ssxmod_itna2",
+      "valueLength": 101,
+      "preview": "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+    }
+  ],
+  "storageSets": [
+    {
+      "path": "localStorage.setItem",
+      "key": "aliyun_waf_testLocalStorage",
+      "valueLength": 27,
+      "preview": "aliyun_waf_testLocalStorage"
+    },
+    {
+      "path": "localStorage.setItem",
+      "key": "__00b204e9800998__",
+      "valueLength": 37,
+      "preview": "2034182722a19e80e0fc3d||1795830688845"
+    }
+  ],
+  "callsOfInterest": [
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1074px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1078px)\""
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"canvas\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext",
+      "args": [
+        "\"webgl\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getExtension",
+      "args": [
+        "\"WEBGL_debug_renderer_info\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "args": [
+        "37445"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "args": [
+        "37446"
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"canvas\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext",
+      "args": [
+        "\"2d\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillRect",
+      "args": [
+        "125",
+        "1",
+        "62",
+        "20"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "args": [
+        "\"Cwm fjordbank glyphs vext quiz, 😃\"",
+        "2",
+        "15"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "args": [
+        "\"Cwm fjordbank glyphs vext quiz, 😃\"",
+        "4",
+        "45"
+      ]
+    },
+    {
+      "path": "document.createElement().toDataURL",
+      "args": []
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "args": [
+        "\"selenium\""
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind()",
+      "args": []
+    },
+    {
+      "path": "speechSynthesis.addEventListener",
+      "args": [
+        "\"voiceschanged\"",
+        "[Function anonymous]"
+      ]
+    },
+    {
+      "path": "document.fonts.load",
+      "args": [
+        "\"16px \\\"FKGroteskNeue\\\"\""
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"genspark-float-bar\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"script\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"a\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"button\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"input\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"textarea\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 10001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 8001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 6001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 4001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1751px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1876px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1877px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1908px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1909px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1917px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1921px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1918px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 10001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 8001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 6001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 4001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1251px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1251px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1064px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1064px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1080px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1088px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1074px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1078px)\""
+      ]
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"claude-agent-stop-container\""
+      ]
+    },
+    {
+      "path": "localStorage.getItem",
+      "args": [
+        "\"_waf_3d7faf79\""
+      ]
+    },
+    {
+      "path": "localStorage.getItem",
+      "args": [
+        "\"_waf_bd8ce2ce37\""
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "args": [
+        "[object Window]"
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"div\""
+      ]
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.head.removeChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"genspark-float-bar\""
+      ]
+    },
+    {
+      "path": "localStorage._dump",
+      "args": []
+    },
+    {
+      "path": "localStorage._dump",
+      "args": []
+    }
+  ]
+}
+===== ENV FILL SUMMARY END =====
+
+
+===== ENV FILL SUMMARY =====
+reason=process_exit
+{
+  "logPath": "D:\\downloads\\cache\\js_reverse\\pzds_reverse\\ssxmod\\env_log.txt",
+  "missing": [
+    {
+      "path": "navigator.brave",
+      "count": 2
+    },
+    {
+      "path": "navigator.genspark",
+      "count": 2
+    },
+    {
+      "path": "localStorage._dump().toJSON",
+      "count": 2
+    },
+    {
+      "path": "performance.markResourceTiming",
+      "count": 1
+    },
+    {
+      "path": "document.documentElement.doScroll",
+      "count": 1
+    },
+    {
+      "path": "document.head.childNodes.0",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().style.-webkit-hyphens",
+      "count": 1
+    },
+    {
+      "path": "navigator.oscpu",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.0.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.1.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.2.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.3.version",
+      "count": 1
+    },
+    {
+      "path": "navigator.plugins.4.version",
+      "count": 1
+    },
+    {
+      "path": "document.mozHidden",
+      "count": 1
+    },
+    {
+      "path": "chrome.runtime",
+      "count": 1
+    },
+    {
+      "path": "navigator.solana",
+      "count": 1
+    }
+  ],
+  "set": [
+    {
+      "path": "document.cookie",
+      "count": 4
+    },
+    {
+      "path": "document.createElement().getContext().fillStyle",
+      "count": 3
+    },
+    {
+      "path": "document.cookieStore._aliyunwaf_test_cookie",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().font",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().innerHTML",
+      "count": 2
+    },
+    {
+      "path": "document.createElement()._innerHTML",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().childNodes.length",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild.href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild().href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild._href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild()._href",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().text",
+      "count": 1
+    },
+    {
+      "path": "document.createElement()._text",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().textContent",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().height",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().width",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().style.display",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().textBaseline",
+      "count": 1
+    },
+    {
+      "path": "document.cookieStore.ssxmod_itna",
+      "count": 1
+    },
+    {
+      "path": "document.cookieStore.ssxmod_itna2",
+      "count": 1
+    },
+    {
+      "path": "XMLHttpRequest._waf_hook",
+      "count": 1
+    }
+  ],
+  "call": [
+    {
+      "path": "matchMedia",
+      "count": 114
+    },
+    {
+      "path": "document.addEventListener",
+      "count": 12
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "count": 6
+    },
+    {
+      "path": "document.createElement",
+      "count": 6
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "count": 5
+    },
+    {
+      "path": "setTimeout",
+      "count": 4
+    },
+    {
+      "path": "document.getElementById",
+      "count": 4
+    },
+    {
+      "path": "localStorage.getItem",
+      "count": 3
+    },
+    {
+      "path": "localStorage.setItem",
+      "count": 2
+    },
+    {
+      "path": "setInterval",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "count": 2
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "count": 2
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "count": 2
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "count": 2
+    },
+    {
+      "path": "localStorage._dump",
+      "count": 2
+    },
+    {
+      "path": "document.head.insertBefore",
+      "count": 1
+    },
+    {
+      "path": "localStorage.removeItem",
+      "count": 1
+    },
+    {
+      "path": "performance.getEntries",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().getExtension",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().getContext().fillRect",
+      "count": 1
+    },
+    {
+      "path": "document.createElement().toDataURL",
+      "count": 1
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind()",
+      "count": 1
+    },
+    {
+      "path": "speechSynthesis.addEventListener",
+      "count": 1
+    },
+    {
+      "path": "document.fonts.load",
+      "count": 1
+    },
+    {
+      "path": "document.head.removeChild",
+      "count": 1
+    }
+  ],
+  "error": [],
+  "rootMissing": {
+    "Audio": 1,
+    "FileReader": 1,
+    "DOMParser": 1,
+    "XMLSerializer": 1,
+    "WebGL2RenderingContext": 1,
+    "Storage": 1,
+    "Location": 1,
+    "PluginArray": 1,
+    "MimeTypeArray": 1,
+    "Plugin": 1,
+    "MimeType": 1,
+    "CSS": 1,
+    "openDatabase": 1,
+    "Notification": 1,
+    "Worker": 1,
+    "SharedWorker": 1
+  },
+  "cookieSets": [
+    {
+      "key": "_aliyunwaf_test_cookie",
+      "valueLength": 4,
+      "preview": "test"
+    },
+    {
+      "key": "_aliyunwaf_test_cookie",
+      "valueLength": 0,
+      "preview": ""
+    },
+    {
+      "key": "ssxmod_itna",
+      "valueLength": 447,
+      "preview": "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em4wDBTxG83hxGk2DWPGE3Pq2KwVzi7oTP3h7gBp43ojrEP4Yi820qmeIX/j_nn=LNs14pKAeDU4GnzRGDOAeD44DvDBYD74G_DDeDixGmz4DS0DD9DGp3ynuNXeDEDYp3p4DmDGA3seDgIDDBDD="
+    },
+    {
+      "key": "ssxmod_itna2",
+      "valueLength": 101,
+      "preview": "1-YqGxuDnD2DBQ0=wxYQPY5iOQ4IDQq7QqDRDl4BtQD2DIke7=GFKDC2GU2WgOq_x0KK457Em_bDGfehbdkSmouwMS2dYqdOhUpGD"
+    }
+  ],
+  "storageSets": [
+    {
+      "path": "localStorage.setItem",
+      "key": "aliyun_waf_testLocalStorage",
+      "valueLength": 27,
+      "preview": "aliyun_waf_testLocalStorage"
+    },
+    {
+      "path": "localStorage.setItem",
+      "key": "__00b204e9800998__",
+      "valueLength": 37,
+      "preview": "2034182722a19e80e0fc3d||1795830688845"
+    }
+  ],
+  "callsOfInterest": [
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1074px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1078px)\""
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"canvas\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext",
+      "args": [
+        "\"webgl\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getExtension",
+      "args": [
+        "\"WEBGL_debug_renderer_info\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "args": [
+        "37445"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().getParameter",
+      "args": [
+        "37446"
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"canvas\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext",
+      "args": [
+        "\"2d\""
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillRect",
+      "args": [
+        "125",
+        "1",
+        "62",
+        "20"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "args": [
+        "\"Cwm fjordbank glyphs vext quiz, 😃\"",
+        "2",
+        "15"
+      ]
+    },
+    {
+      "path": "document.createElement().getContext().fillText",
+      "args": [
+        "\"Cwm fjordbank glyphs vext quiz, 😃\"",
+        "4",
+        "45"
+      ]
+    },
+    {
+      "path": "document.createElement().toDataURL",
+      "args": []
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "document.currentScript.getAttribute",
+      "args": [
+        "\"selenium\""
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind()",
+      "args": []
+    },
+    {
+      "path": "speechSynthesis.addEventListener",
+      "args": [
+        "\"voiceschanged\"",
+        "[Function anonymous]"
+      ]
+    },
+    {
+      "path": "document.fonts.load",
+      "args": [
+        "\"16px \\\"FKGroteskNeue\\\"\""
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"genspark-float-bar\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"script\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"a\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"button\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"input\""
+      ]
+    },
+    {
+      "path": "document.getElementsByTagName",
+      "args": [
+        "\"textarea\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 10001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 8001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 6001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 4001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1751px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1876px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1877px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1908px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1939px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1909px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1917px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1924px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1921px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-width: 1918px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 10001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 8001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 6001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 4001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 2001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1501px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1251px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1251px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1001px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1064px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1126px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1064px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1080px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1095px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1088px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1074px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1081px)\""
+      ]
+    },
+    {
+      "path": "matchMedia",
+      "args": [
+        "\"(min-device-height: 1078px)\""
+      ]
+    },
+    {
+      "path": "navigator.hasOwnProperty",
+      "args": [
+        "\"webdriver\""
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"claude-agent-stop-container\""
+      ]
+    },
+    {
+      "path": "localStorage.getItem",
+      "args": [
+        "\"_waf_3d7faf79\""
+      ]
+    },
+    {
+      "path": "localStorage.getItem",
+      "args": [
+        "\"_waf_bd8ce2ce37\""
+      ]
+    },
+    {
+      "path": "speechSynthesis.getVoices.bind",
+      "args": [
+        "[object Window]"
+      ]
+    },
+    {
+      "path": "document.createElement",
+      "args": [
+        "\"div\""
+      ]
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.createElement().firstChild._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.createElement().appendChild()._updateURL",
+      "args": []
+    },
+    {
+      "path": "document.head.removeChild",
+      "args": [
+        "[object Object]"
+      ]
+    },
+    {
+      "path": "document.getElementById",
+      "args": [
+        "\"genspark-float-bar\""
+      ]
+    },
+    {
+      "path": "localStorage._dump",
+      "args": []
+    },
+    {
+      "path": "localStorage._dump",
+      "args": []
+    }
+  ]
+}
+===== ENV FILL SUMMARY END =====
+

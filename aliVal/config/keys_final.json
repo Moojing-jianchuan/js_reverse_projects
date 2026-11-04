@@ -1,0 +1,24 @@
+{
+  "Er": {
+    "KEY_ID": "111jdk439dJJIjd023823201",
+    "KEY_SECRET": "222aiJodos2938JDdosko2djd82sf0"
+  },
+  "kr": {
+    "KEY_ID": "DuaneAprqkYsF3nt1yjK29Bf",
+    "KEY_SECRET": "DuanemHmyeE6LXCC46sJEDUw5DTlSZ"
+  },
+  "WEB_AES": {
+    "REQ": "45f8ac1e1de14397",
+    "RES": "87f879f135f27da7",
+    "FLAG": "c175a358550d02e2",
+    "UPLOAD": "a549a55c60a39aa0",
+    "PREID": "75ae5c150d235802"
+  },
+  "ACCESS_SEC": "FqJB6iRNVYdEGpwb",
+  "AES_IV": "d35db7e39ebbf3d001083105",
+  "derived_IV": "0123456789ABCDEF",
+  "APP_KEY": "ab034ec0643f91399eb33e062dc7fae1",
+  "SALT": "NLAoqT6K03oLbQXW2VS3zA==",
+  "SESSION_ID_SALT": "X1y5VstbB5zqghyJ9g8a0A==",
+  "API_VERSION": "2023-03-05"
+}
