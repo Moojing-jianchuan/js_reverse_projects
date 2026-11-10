@@ -1,0 +1,588 @@
+From 4ffa527ecb055bfcf38e4cf3205a0e656513b3d1 Mon Sep 17 00:00:00 2001
+From: Moojing-jianchuan <jianchuan.lu@moojing.com>
+Date: Wed, 11 Nov 2026 02:42:02 +0800
+Subject: [PATCH] feat(instrumentation): add tap_stage_calls for flattened-VMP
+ dispatcher taps
+
+Control-flow-flattened JSVMP bundles funnel every state through one call shape:
+
+    return l.apply(this, [9425].concat(Array.prototype.slice.call(arguments)))
+
+Member/call taps cannot see this boundary: the dispatcher body is opaque, so
+when a locally emulated environment diverges from a real browser there is no
+per-state evidence to compare. Only the final token differs, and the failure
+gives no hint which stage drifted.
+
+This adds `tap_stage_calls` to `instrumentation(action="install")`. It rewrites
+that exact shape into `__mcp_tap_stage(<p>, fn, this, arguments, tag, site)`,
+which calls the original dispatcher unchanged and records one `tap_stage`
+event with the state id (`p`), `argc`, previews of the first arguments, and the
+return preview. `action="log"` now aggregates these into `summary.hot_stages`,
+and `type_filter="tap_stage"` / `key_filter=<p>` select them.
+
+Design notes:
+
+* Literal match, not AST: it is independent of `mode` and of the
+  `filter_property_names` / `filter_object_names` filters, and it still applies
+  when the file cannot be parsed. In that case `stats.stage_only` is set and the
+  runtime is still injected, so the taps keep working.
+* Off by default; existing rewrites, offsets, and behaviour are unchanged.
+* Arguments are copied with a captured `Array.prototype.slice` before the call,
+  so the tap never mutates the argument list and logging failures cannot replace
+  the dispatcher's return value.
+* `include_source_site=True` attaches the usual site id for stage taps too.
+
+Verified on a real 315 KB security SDK: 169 dispatcher sites rewritten, 754
+`tap_stage` events produced for one `ABC().z(seed, ts)` call (51 distinct
+states), and the generated token length is unchanged.
+---
+ docs/TOOLS.md                                 |  16 +++
+ docs/TOOLS_en.md                              |  17 +++
+ .../tools/instrumentation.py                  |  38 +++++-
+ .../utils/ast_rewriter.py                     |  48 ++++++--
+ src/camoufox_reverse_mcp/utils/js_rewriter.py | 116 ++++++++++++++++--
+ tests/test_stage_taps.py                      |  71 +++++++++++
+ 6 files changed, 281 insertions(+), 25 deletions(-)
+ create mode 100644 tests/test_stage_taps.py
+
+diff --git a/docs/TOOLS.md b/docs/TOOLS.md
+index be5d5c3..92d697f 100644
+--- a/docs/TOOLS.md
++++ b/docs/TOOLS.md
+@@ -155,6 +155,22 @@ content sandbox 以允许内容进程写入；普通启动不会改动 sandbox
+ 10. compare_env()                                  ← 收集环境用于 Node.js 补齐
+ ```
+ 
++### 场景 2b：控制流平坦化 VMP 的阶段对照
++
++把「每个状态的分发调用」变成可对照的事件流，适合在真实浏览器与本地补环境之间逐阶段比对：
++
++```
++1. instrumentation(action="install", url_pattern="**/security-js/*.js",
++                   tap_stage_calls=True, tag="vmp")   ← 改写 return fn.apply(this,[p].concat(...))
++2. navigate("https://target-site.com/")               ← 必须 install 之后再导航
++3. instrumentation(action="log", type_filter="tap_stage")
++   → summary.hot_stages 给出每个状态 p 的调用次数，entries 里带 argc / args / ret 预览
++4. 同一份 seed 在另一端（本地补环境）重复一次，按 p 序列和 ret 摘要逐段对齐
++```
++
++要点：`tap_stage_calls` 是**字面量匹配**，与 `mode`/`filter_*` 无关，文件解析失败时仍然生效
++（此时 `stats.stage_only=true`，表示只做了阶段插桩）。
++
+ ### 场景 3：验证协议代码
+ 
+ ```
+diff --git a/docs/TOOLS_en.md b/docs/TOOLS_en.md
+index 68feac1..bbd6fa6 100644
+--- a/docs/TOOLS_en.md
++++ b/docs/TOOLS_en.md
+@@ -172,6 +172,23 @@ trace_property_access(action="stop", mode="summary")
+ 10. compare_env()                                  ← Collect env for Node.js
+ ```
+ 
++### Scenario 2b: Stage comparison for control-flow-flattened VMPs
++
++Turn each dispatcher call into a comparable event stream, so a real browser run and
++a locally emulated run can be aligned state by state:
++
++```
++1. instrumentation(action="install", url_pattern="**/security-js/*.js",
++                   tap_stage_calls=True, tag="vmp")   ← rewrite return fn.apply(this,[p].concat(...))
++2. navigate("https://target-site.com/")               ← install must come before navigate
++3. instrumentation(action="log", type_filter="tap_stage")
++   → summary.hot_stages counts every state `p`; entries carry argc / args / ret previews
++4. Repeat with the same seed on the other side (local env emulation) and align by p sequence
++```
++
++`tap_stage_calls` is a literal match: it is independent of `mode`/`filter_*` and still
++applies when the file cannot be parsed (`stats.stage_only=true` means stage taps only).
++
+ ### Scenario 3: Verify Signing Code
+ 
+ ```
+diff --git a/src/camoufox_reverse_mcp/tools/instrumentation.py b/src/camoufox_reverse_mcp/tools/instrumentation.py
+index a597337..a8321ce 100644
+--- a/src/camoufox_reverse_mcp/tools/instrumentation.py
++++ b/src/camoufox_reverse_mcp/tools/instrumentation.py
+@@ -56,6 +56,7 @@ async def instrumentation(
+     tag: str = "vmp",
+     rewrite_member_access: bool = True,
+     rewrite_calls: bool = True,
++    tap_stage_calls: bool = False,
+     max_rewrites: int = 20000,
+     fallback_on_error: bool = True,
+     ignore_csp: bool = False,
+@@ -98,6 +99,13 @@ async def instrumentation(
+         tag: For "install"/"log" — group identifier.
+         rewrite_member_access: For "install" — tap obj[key] reads.
+         rewrite_calls: For "install" — tap fn(args) calls.
++        tap_stage_calls: For "install" — rewrite the flattened-VMP dispatcher
++            shape `return fn.apply(this, [<int>].concat(Array.prototype.slice
++            .call(arguments)))` into per-state `tap_stage` events (state id `p`,
++            argc, first args previews, return preview). This is a literal match,
++            so it also works when the rest of the file is not parseable, and it
++            is independent of `mode`/`filter_*`. Use it to compare a VM's state
++            sequence between a real browser and an emulated environment.
+         include_source_site: For "install" — attach a stable site_id and
+             monotonic seq to tap events, plus an original-source range map in
+             the log response. Default False.
+@@ -108,7 +116,8 @@ async def instrumentation(
+         clear_log: For "reload" — clear JSVMP logs before reload.
+         wait_until: For "reload" — "load" / "domcontentloaded" / "networkidle".
+         tag_filter: For "log" — filter by tag.
+-        type_filter: For "log" — "tap_get", "tap_call", "tap_method", "tap_call_err".
++        type_filter: For "log" — "tap_get", "tap_call", "tap_method",
++            "tap_call_err", "tap_stage".
+         key_filter: For "log" — substring match on property/method name.
+         limit: For "log" — max entries to return.
+         clear: For "log" — clear log after retrieval in the selected main world.
+@@ -148,6 +157,7 @@ async def instrumentation(
+             tag=tag,
+             rewrite_member_access=rewrite_member_access,
+             rewrite_calls=rewrite_calls,
++            tap_stage_calls=tap_stage_calls,
+             max_rewrites=max_rewrites,
+             fallback_on_error=fallback_on_error,
+             ignore_csp=ignore_csp,
+@@ -198,7 +208,8 @@ async def _install(url_pattern, mode, tag, rewrite_member_access,
+                    rewrite_calls, max_rewrites, fallback_on_error, ignore_csp,
+                    filter_property_names, filter_object_names,
+                    max_file_size, on_oversized,
+-                   include_source_site=False) -> dict:
++                   include_source_site=False,
++                   tap_stage_calls=False) -> dict:
+     try:
+         if mode not in ("ast", "regex") or on_oversized not in ("selective", "skip", "force"):
+             return {"error": "Invalid mode or on_oversized policy"}
+@@ -292,6 +303,7 @@ async def _install(url_pattern, mode, tag, rewrite_member_access,
+                         filter_property_names=list(prop_filter_set) if prop_filter_set else None,
+                         filter_object_names=list(obj_filter_set) if obj_filter_set else None,
+                         include_source_site=include_source_site,
++                        tap_stage_calls=tap_stage_calls,
+                     )
+                     if rewritten is None:
+                         stats["last_error"] = rewrite_stats.get("error", "AST parse/rewrite failed")
+@@ -299,14 +311,19 @@ async def _install(url_pattern, mode, tag, rewrite_member_access,
+                             mode_used = "regex (fallback)"
+                             rewritten, rewrite_stats = regex_rewrite(src, tag=tag,
+                                 rewrite_member_access=rewrite_member_access,
+-                                max_rewrites=max_rewrites, include_source_site=include_source_site)
++                                max_rewrites=max_rewrites, include_source_site=include_source_site,
++                                tap_stage_calls=tap_stage_calls)
+                 elif mode == "regex":
+                     rewritten, rewrite_stats = regex_rewrite(src, tag=tag,
+                         rewrite_member_access=rewrite_member_access,
+-                        max_rewrites=max_rewrites, include_source_site=include_source_site)
++                        max_rewrites=max_rewrites, include_source_site=include_source_site,
++                        tap_stage_calls=tap_stage_calls)
+                 else:
+                     raise ValueError("mode must be ast or regex")
+-                edit_count = rewrite_stats.get("edits", rewrite_stats.get("member_access_rewrites", 0))
++                edit_count = rewrite_stats.get("edits")
++                if edit_count is None:
++                    edit_count = (rewrite_stats.get("member_access_rewrites", 0)
++                                  + rewrite_stats.get("stage_rewrites", 0))
+                 stats["last_parser_backend"] = rewrite_stats.get("parser_backend")
+                 if rewritten is None or not edit_count:
+                     stats["files_passed_through"] += 1
+@@ -363,6 +380,7 @@ async def _install(url_pattern, mode, tag, rewrite_member_access,
+             "route_level": "context",
+             "selective": bool(prop_filter_set or obj_filter_set),
+             "include_source_site": include_source_site,
++            "tap_stage_calls": tap_stage_calls,
+             "filter_property_names": filter_property_names,
+             "filter_object_names": filter_object_names,
+             "note": "Route active. Navigate or reload to trigger rewrite.",
+@@ -393,11 +411,13 @@ async def _get_log(tag_filter, type_filter, key_filter, limit, clear, frame_url=
+             data = [d for d in data
+                     if key_filter in (d.get("key") or "")
+                     or key_filter in (d.get("method") or "")
+-                    or key_filter in (d.get("name") or "")]
++                    or key_filter in (d.get("name") or "")
++                    or key_filter in str(d.get("p") or "")]
+ 
+         key_count: dict[str, int] = {}
+         method_count: dict[str, int] = {}
+         function_count: dict[str, int] = {}
++        stage_count: dict[str, int] = {}
+         site_count: dict[str, int] = {}
+         for e in data:
+             if e.get("type") == "tap_get":
+@@ -406,6 +426,9 @@ async def _get_log(tag_filter, type_filter, key_filter, limit, clear, frame_url=
+             elif e.get("type") == "tap_method":
+                 m = f"{e.get('objType', '?')}.{e.get('method', '?')}"
+                 method_count[m] = method_count.get(m, 0) + 1
++            elif e.get("type") == "tap_stage":
++                k = str(e.get("p", "?"))
++                stage_count[k] = stage_count.get(k, 0) + 1
+             elif e.get("type") in ("tap_call", "tap_call_err"):
+                 fn = e.get("name", "?")
+                 function_count[fn] = function_count.get(fn, 0) + 1
+@@ -447,6 +470,9 @@ async def _get_log(tag_filter, type_filter, key_filter, limit, clear, frame_url=
+                 "hot_keys": dict(sorted(key_count.items(), key=lambda x: -x[1])[:30]),
+                 "hot_methods": dict(sorted(method_count.items(), key=lambda x: -x[1])[:30]),
+                 "hot_functions": dict(sorted(function_count.items(), key=lambda x: -x[1])[:30]),
++                **({"hot_stages": dict(sorted(stage_count.items(),
++                                             key=lambda x: -int(x[1]))[:60])}
++                   if stage_count else {}),
+             },
+         }
+         if site_count:
+diff --git a/src/camoufox_reverse_mcp/utils/ast_rewriter.py b/src/camoufox_reverse_mcp/utils/ast_rewriter.py
+index 416c260..5637dc0 100644
+--- a/src/camoufox_reverse_mcp/utils/ast_rewriter.py
++++ b/src/camoufox_reverse_mcp/utils/ast_rewriter.py
+@@ -20,6 +20,8 @@ from typing import Any, Callable
+ from .js_rewriter import (  # reuse the same runtime preamble
+     INSTRUMENT_RUNTIME,
+     build_source_site,
++    directive_end,
++    rewrite_stage_calls,
+     source_identity,
+ )
+ 
+@@ -50,7 +52,7 @@ def _walk(node: Any, parent: Any, callback: Callable[[Any, Any], Any]) -> None:
+ # Names that must never be tap-wrapped
+ _SKIP_CALLEE_NAMES = frozenset({
+     '__mcp_tap_get', '__mcp_tap_call', '__mcp_tap_method',
+-    '__mcp_prepare_method',
++    '__mcp_prepare_method', '__mcp_tap_stage',
+     'require', 'eval',
+ })
+ 
+@@ -64,6 +66,7 @@ def ast_rewrite(
+     filter_property_names: list[str] | None = None,
+     filter_object_names: list[str] | None = None,
+     include_source_site: bool = False,
++    tap_stage_calls: bool = False,
+ ) -> tuple[str | None, dict]:
+     """Rewrite JS source via esprima-python AST walk.
+ 
+@@ -82,11 +85,25 @@ def ast_rewrite(
+     from .js_parser import parse_source
+ 
+     stats: dict[str, Any] = {
+-        "parsed": False, "edits": 0,
++        "parsed": False, "edits": 0, "stage_edits": 0,
+         "member_edits": 0, "call_edits": 0, "method_edits": 0,
+         "skipped": 0, "overlap_skipped": 0,
+     }
+ 
++    # Dispatcher taps run before the AST pass: the rewrite is a literal match of
++    # one call shape, so it does not depend on esprima understanding modern
++    # syntax, and member/call taps then see stable offsets in the same source.
++    stage_sites: list[dict] = []
++    if tap_stage_calls:
++        stage_source_id = ""
++        if include_source_site:
++            stage_source_id, _ = source_identity(src)
++        src, stage_edits, stage_sites = rewrite_stage_calls(
++            src, tag, max_edits,
++            include_source_site=include_source_site, source_id=stage_source_id,
++        )
++        stats["stage_edits"] = stage_edits
++
+     try:
+         tree, parser_backend = parse_source(src, locations=include_source_site)
+         stats["parser_backend"] = parser_backend
+@@ -94,7 +111,20 @@ def ast_rewrite(
+         stats["parsed"] = True
+     except Exception as e:
+         stats["error"] = f"parse_failed: {type(e).__name__}: {e}"
+-        return None, stats
++        if not stats["stage_edits"]:
++            return None, stats
++        # Stage taps are literal rewrites, so they stay usable even when the
++        # parser cannot handle this file. Report the reduced scope explicitly.
++        stats["edits"] = stats["stage_edits"]
++        stats["stage_only"] = True
++        insert_at = directive_end(src)
++        if include_source_site:
++            stats.update({
++                "source_sites": stage_sites,
++                "source_id": source_identity(src)[0],
++            })
++        return (src[:insert_at] + ";\n" + INSTRUMENT_RUNTIME + "\n"
++                + src[insert_at:]), stats
+ 
+     edits: list[dict] = []
+     # A MemberExpression can be an assignment reference several pattern levels
+@@ -361,7 +391,7 @@ def ast_rewrite(
+             "source_sha256": source_sha256,
+             "source_sites": [
+                 e["source_site"] for e in edits if e.get("source_site")
+-            ],
++            ] + stage_sites,
+         })
+ 
+     edits.sort(key=lambda e: -e["start"])
+@@ -369,9 +399,9 @@ def ast_rewrite(
+     for e in edits:
+         out = out[:e["start"]] + e["replacement"] + out[e["end"]:]
+ 
+-    stats["edits"] = len(edits)
++    stats["edits"] = len(edits) + stats["stage_edits"]
+     # Keep the original directive prologue active (also when terminated by ASI).
+-    directive_end = (src.find("\n") + 1 if "\n" in src else len(src)) if src.startswith("#!") else 0
++    directive_at = directive_end(src)
+     for statement in tree.body:
+         expr = getattr(statement, 'expression', None)
+         # esprima-python drops directive annotations after an empty string.
+@@ -381,6 +411,6 @@ def ast_rewrite(
+                 and isinstance(expr.value, str)
+                 and statement.range[0] == expr.range[0]):
+             break
+-        directive_end = statement.range[1]
+-    return (out[:directive_end] + ";\n" + INSTRUMENT_RUNTIME + "\n"
+-            + out[directive_end:]), stats
++        directive_at = statement.range[1]
++    return (out[:directive_at] + ";\n" + INSTRUMENT_RUNTIME + "\n"
++            + out[directive_at:]), stats
+diff --git a/src/camoufox_reverse_mcp/utils/js_rewriter.py b/src/camoufox_reverse_mcp/utils/js_rewriter.py
+index 7470345..bf3e024 100644
+--- a/src/camoufox_reverse_mcp/utils/js_rewriter.py
++++ b/src/camoufox_reverse_mcp/utils/js_rewriter.py
+@@ -28,6 +28,7 @@ INSTRUMENT_RUNTIME = r"""
+   // Capture intrinsics once; never consult a target function's .apply/.name.
+   var apply = Reflect.apply;
+   var arrayPush = Array.prototype.push;
++  var slice = Array.prototype.slice;
+   var stringSlice = String.prototype.slice;
+   var stringIndexOf = String.prototype.indexOf;
+   var stringifyPrimitive = String;
+@@ -126,6 +127,25 @@ INSTRUMENT_RUNTIME = r"""
+   window.__mcp_tap_method = function(obj, key, args, tag, siteId){
+     return window.__mcp_prepare_method(obj, key, tag, siteId)(args);
+   };
++  // Dispatcher-level tap: per-state enter/leave evidence for flattened VMPs.
++  // Arguments are copied before the call so the trace keeps the original list.
++  window.__mcp_tap_stage = function(p, fn, thisArg, args, tag, siteId){
++    var list = apply(slice, args, [0]);
++    var r = apply(fn, thisArg, [p].concat(list));
++    try {
++      if (_enabled(tag, false)) {
++        var n = list.length > 3 ? 3 : list.length;
++        var previews = [];
++        for (var i = 0; i < n; i++) {
++          try { apply(arrayPush, previews, [_preview(list[i])]); }
++          catch (e) { apply(arrayPush, previews, ['?']); }
++        }
++        _push({ type:'tap_stage', tag:tag, p:p, argc:list.length,
++                args:previews, ret:_preview(r) }, siteId);
++      }
++    } catch (ignored) {}
++    return r;
++  };
+ })();
+ """
+ 
+@@ -190,6 +210,73 @@ def build_source_site(source_id: str, kind: str, start: int, end: int) -> dict:
+     }
+ 
+ 
++# ============ Stage / dispatcher-call rewrite ============
++
++# Control-flow-flattened JSVMP dispatchers funnel every state through a single
++# call shape, e.g. ``return l.apply(this, [9425].concat(Array.prototype.slice
++# .call(arguments)))``. Rewriting that shape gives per-state enter/leave events
++# (state id ``p``) without touching the dispatcher body, which is usually the
++# most useful evidence when a VM must be matched stage-by-stage.
++_STAGE_CALL_RE = re.compile(
++    r"return\s+(?P<fn>[A-Za-z_$][A-Za-z0-9_$]*)\.apply\(\s*this\s*,\s*"
++    r"\[\s*(?P<p>\d+)\s*\]\s*\.concat\(\s*"
++    r"Array\.prototype\.slice\.call\(\s*arguments\s*\)\s*\)\s*\)"
++)
++
++_LEADING_STRING_RE = re.compile(
++    rf"{_TRIVIA}(?:{_STRING}){_TRIVIA}(?:;|(?=\r?\n|$))"
++)
++
++
++def directive_end(src: str) -> int:
++    """Return the offset just past a leading directive prologue (best effort)."""
++    pos = 0
++    if src.startswith("#!"):
++        newline = src.find("\n")
++        pos = len(src) if newline == -1 else newline + 1
++    while True:
++        match = _LEADING_STRING_RE.match(src, pos)
++        if match is None:
++            return pos
++        pos = match.end()
++
++
++def rewrite_stage_calls(
++    src: str,
++    tag: str = "vmp",
++    max_rewrites: int = 20000,
++    include_source_site: bool = False,
++    source_id: str = "",
++) -> Tuple[str, int, list[dict]]:
++    """Rewrite dispatcher entry calls into ``__mcp_tap_stage`` taps.
++
++    Only the exact ``return fn.apply(this, [<int>].concat(...arguments))`` shape
++    is matched; every other call site is left byte-for-byte unchanged.
++    """
++    edits: list[tuple[int, int, str]] = []
++    source_sites: list[dict] = []
++    if include_source_site and not source_id:
++        source_id, _ = source_identity(src)
++    for match in _STAGE_CALL_RE.finditer(src):
++        if len(edits) >= max_rewrites:
++            break
++        start, end = match.span()
++        state, fn = match.group("p"), match.group("fn")
++        site_arg = ""
++        if include_source_site:
++            site = build_source_site(source_id, "tap_stage", start, end)
++            source_sites.append(site)
++            site_arg = ", " + json.dumps(site["site_id"])
++        edits.append((
++            start, end,
++            f"return __mcp_tap_stage({state}, {fn}, this, arguments, {json.dumps(tag)}{site_arg})",
++        ))
++    for start, end, replacement in reversed(edits):
++        src = src[:start] + replacement + src[end:]
++    return src, len(edits), source_sites
++
++
++
+ def _rewrite_member_access(
+     src: str,
+     tag: str,
+@@ -230,14 +317,20 @@ def _rewrite_member_access(
+ def regex_rewrite(src: str, tag: str = "vmp",
+                   rewrite_member_access: bool = True,
+                   max_rewrites: int = 5000,
+-                  include_source_site: bool = False) -> Tuple[str, dict]:
++                  include_source_site: bool = False,
++                  tap_stage_calls: bool = False) -> Tuple[str, dict]:
+     """Conservative dependency-free fallback, with explicit semantic boundaries.
+ 
+     Unrecognized programs are returned byte-for-byte, without a preamble. In
+     particular modern syntax parse failures do not trigger heuristic rewrites.
++
++    ``tap_stage_calls`` is independent of the simple-statement whitelist: the
++    dispatcher call shape is matched literally and does not depend on the rest
++    of the program being parseable.
+     """
+     statements = _simple_statements(src)
+-    stats = {"member_access_rewrites": 0, "semantic_boundary": _REGEX_BOUNDARY}
++    stats = {"member_access_rewrites": 0, "stage_rewrites": 0,
++             "semantic_boundary": _REGEX_BOUNDARY}
+     if statements is None:
+         stats["skipped_reason"] = "unsupported_program_syntax"
+     new_src = src
+@@ -252,21 +345,24 @@ def regex_rewrite(src: str, tag: str = "vmp",
+             include_source_site=include_source_site, source_id=source_id,
+         )
+         stats["member_access_rewrites"] = n
++    if tap_stage_calls:
++        new_src, n, stage_sites = rewrite_stage_calls(
++            new_src, tag, max_rewrites,
++            include_source_site=include_source_site, source_id=source_id,
++        )
++        stats["stage_rewrites"] = n
++        source_sites.extend(stage_sites)
+     if include_source_site:
+         stats.update({
+             "source_id": source_id,
+             "source_sha256": source_sha256,
+             "source_sites": source_sites,
+         })
+-    if not stats["member_access_rewrites"]:
++    if not stats["member_access_rewrites"] and not stats["stage_rewrites"]:
+         return src, stats
+-    directive_end = 0
+-    for statement in statements or []:
+-        if statement.group('declaration') or not re.fullmatch(_STRING, statement.group('expression')):
+-            break
+-        directive_end = statement.end()
+-    return (new_src[:directive_end] + ";\n" + INSTRUMENT_RUNTIME + "\n"
+-            + new_src[directive_end:]), stats
++    insert_at = directive_end(new_src)
++    return (new_src[:insert_at] + ";\n" + INSTRUMENT_RUNTIME + "\n"
++            + new_src[insert_at:]), stats
+ 
+ 
+ # ============ AST-based rewrite (via page-side Acorn) ============
+diff --git a/tests/test_stage_taps.py b/tests/test_stage_taps.py
+new file mode 100644
+index 0000000..23830a3
+--- /dev/null
++++ b/tests/test_stage_taps.py
+@@ -0,0 +1,71 @@
++"""Stage/dispatcher taps: literal rewrite of the flattened-VMP call shape."""
++from camoufox_reverse_mcp.utils.ast_rewriter import ast_rewrite
++from camoufox_reverse_mcp.utils.js_rewriter import (
++    INSTRUMENT_RUNTIME,
++    regex_rewrite,
++    rewrite_stage_calls,
++)
++
++STAGE_CALL = (
++    "function d(a){switch(a){case 1:return l.apply(this,[9425].concat("
++    "Array.prototype.slice.call(arguments)));}}"
++)
++
++
++def test_runtime_defines_stage_tap():
++    assert "__mcp_tap_stage" in INSTRUMENT_RUNTIME
++    assert "type:'tap_stage'" in INSTRUMENT_RUNTIME
++
++
++def test_stage_rewrite_matches_exact_dispatcher_shape():
++    out, count, sites = rewrite_stage_calls(STAGE_CALL, tag="t")
++    assert count == 1
++    assert '__mcp_tap_stage(9425, l, this, arguments, "t")' in out
++    assert sites == []
++
++
++def test_stage_rewrite_leaves_other_calls_untouched():
++    src = "return x.apply(this, [1, 2]);"
++    out, count, _ = rewrite_stage_calls(src, tag="t")
++    assert count == 0
++    assert out == src
++
++
++def test_stage_rewrite_adds_source_sites_when_requested():
++    out, count, sites = rewrite_stage_calls(STAGE_CALL, tag="t", include_source_site=True)
++    assert count == 1
++    assert len(sites) == 1
++    assert sites[0]["kind"] == "tap_stage"
++    assert sites[0]["site_id"].endswith(":tap_stage")
++
++
++def test_regex_rewrite_stage_only_still_injects_runtime():
++    out, stats = regex_rewrite(STAGE_CALL, tag="t", tap_stage_calls=True)
++    assert stats["stage_rewrites"] == 1
++    assert "__mcp_tap_stage(9425" in out
++    assert "__mcp_tap_installed" in out
++
++
++def test_ast_rewrite_adds_stage_taps():
++    out, stats = ast_rewrite(
++        STAGE_CALL, tag="t", tap_stage_calls=True,
++        rewrite_member_access=False, rewrite_calls=False,
++    )
++    assert out is not None
++    assert stats["stage_edits"] == 1
++    assert stats["edits"] == 1
++    assert "__mcp_tap_stage(9425" in out
++
++
++def test_ast_rewrite_keeps_stage_taps_when_parser_fails(monkeypatch):
++    import camoufox_reverse_mcp.utils.js_parser as js_parser
++
++    def boom(src, locations=False):  # noqa: ARG001
++        raise ValueError("parser unavailable")
++
++    monkeypatch.setattr(js_parser, "parse_source", boom)
++    out, stats = ast_rewrite(STAGE_CALL, tag="t", tap_stage_calls=True)
++    assert out is not None
++    assert stats.get("stage_only") is True
++    assert stats["stage_edits"] == 1
++    assert "__mcp_tap_stage(9425" in out
+-- 
+2.53.0.windows.2
+
