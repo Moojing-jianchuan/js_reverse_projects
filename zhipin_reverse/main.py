@@ -1,6 +1,7 @@
 # 主脚本：Python(curl_cffi 模拟 Firefox TLS/HTTP2) 发请求 + Node 生成 __zp_stoken__
 import subprocess
 import random
+import sys
 import urllib.parse
 import uuid
 import time
@@ -17,8 +18,15 @@ def gen_trace_id():
     return 'F-' + ''.join(random.choice(chars) for _ in range(20))
 
 
-def gen_token(seed, raw_ts):
-    out = subprocess.check_output(['node', 'gen_token.js', seed, str(raw_ts)], text=True).strip()
+def _default_sdk():
+    import glob
+    cands = [p for p in glob.glob('config/_sdk_*.js') if '.inst.' not in p]
+    return sorted(cands)[-1] if cands else 'config/_sdk_6d66a65a.js'
+
+
+def gen_token(seed, raw_ts, sdk=None):
+    sdk = sdk or _default_sdk()
+    out = subprocess.check_output(['node', 'gen_token2.js', sdk, seed, str(raw_ts)], text=True).strip()
     return out
 
 
@@ -51,9 +59,21 @@ def build_cookies():
     }
 
 
+def _proxies():
+    """出口代理：--proxy 或环境变量 ZP_PROXY，例如 http://127.0.0.1:7897 / socks5://127.0.0.1:1080"""
+    import os
+    p = None
+    for i, a in enumerate(sys.argv):
+        if a == '--proxy' and i + 1 < len(sys.argv):
+            p = sys.argv[i + 1]
+    p = p or os.environ.get('ZP_PROXY')
+    return {'http': p, 'https': p} if p else None
+
+
 def main():
     # 1. getSeed
-    r1 = requests.post(JOBLIST, headers=build_headers(), data=BODY, cookies=build_cookies(), impersonate=IMPERSONATE)
+    r1 = requests.post(JOBLIST, headers=build_headers(), data=BODY, cookies=build_cookies(),
+                       impersonate=IMPERSONATE, proxies=_proxies())
     j1 = r1.json()
     zp = j1.get('zpData')
     print('[seed] code:', j1.get('code'), 'seed:', (zp or {}).get('seed'))
@@ -68,7 +88,8 @@ def main():
     # 3. fetchJobs
     cookies = build_cookies()
     cookies['__zp_stoken__'] = urllib.parse.quote(token, safe='')
-    r2 = requests.post(JOBLIST, headers=build_headers(), data=BODY, cookies=cookies, impersonate=IMPERSONATE)
+    r2 = requests.post(JOBLIST, headers=build_headers(), data=BODY, cookies=cookies,
+                       impersonate=IMPERSONATE, proxies=_proxies())
     j2 = r2.json()
     print('[jobs] code:', j2.get('code'), 'message:', j2.get('message'))
     if j2.get('zpData') and j2['zpData'].get('jobList'):

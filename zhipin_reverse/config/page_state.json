@@ -1,0 +1,57 @@
+{
+ "href": "https://www.zhipin.com/web/passport/zp/security.html?callbackUrl=https%3A%2F%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjobs&appName=zhipin_geek_spa_web&code=37&seed=hLsIpRAtbih0tEGPqldW%2BVmtOWCmzFqGzP98yXUl1SE%3D&ts=1794368225693&name=6d66a65a",
+ "origin": "https://www.zhipin.com",
+ "title": "请稍候 - BOSS直聘",
+ "cookie": "__zp_stoken__=12d8gNjcjw4DDscK8OikTOTYjOEAyNjc3Ojg5Nxg8Pjk4ODc5E8O6wrfDk8Ogw4xew4jDv8K9NyI3QDY2N0FAQTsSNzw%2BOTc4QT7EuMK4QEE%2BNiccwobDgcOlw5bDjVnDjg3DlcK4LsKVwrYpw7jDgALDjcK3DFbDgSgoDxEMXFtXEREKBhFhBwlWBwsRCQpWXBEKDVdbWwkGBxAeFkUQwrvCvsOAEMK8wr%2FCtxvCvMK4wrbDlcK8wrjDgT8%2BJzw4Hz46NjZANzzEucOVxL7Dg8OYxLnDicK2w43CksOlxLnEvsORSMS5wrkWwoPDsMOHxLnEvsOfw7nCuC5AwobCuUrEscWzxJfDqcSWwplMwpFYw7rCt8KVwpvCv1fCksKfwrHCqsOEwrTCjlvCqkPCgsK4wrJ6wr9UwqnCt091ZcK9cFHDgUjCtXVhTnVCaEMKFFkKDDwQwoYrw40%3D",
+ "localStorage": {
+  "passport-uuid": "uuid-ae64f9zTB1wIeXvFAwvOu"
+ },
+ "sessionStorage": {},
+ "timing": {
+  "navigationStart": 1794368230872,
+  "unloadEventStart": 0,
+  "unloadEventEnd": 0,
+  "redirectStart": 0,
+  "redirectEnd": 0,
+  "fetchStart": 1794368230869,
+  "domainLookupStart": 1794368230886,
+  "domainLookupEnd": 1794368230886,
+  "connectStart": 1794368230886,
+  "connectEnd": 1794368230886,
+  "secureConnectionStart": 1794368230886,
+  "requestStart": 1794368230886,
+  "responseStart": 1794368233182,
+  "responseEnd": 1794368233655,
+  "domLoading": 1794368233185,
+  "domInteractive": 1794368234924,
+  "domContentLoadedEventStart": 1794368234924,
+  "domContentLoadedEventEnd": 1794368234927,
+  "domComplete": 1794368236473,
+  "loadEventStart": 1794368236473,
+  "loadEventEnd": 1794368236473
+ },
+ "navigation": {
+  "type": 0
+ },
+ "globals": {
+  "_passportConfig": "undefined",
+  "Security": "undefined",
+  "SecurityJsHelper": "undefined",
+  "BaseMixin": "undefined",
+  "UrlHelper": "undefined",
+  "CookieHelper": "undefined",
+  "EnvHelper": "undefined",
+  "WhitelistConfig": "undefined",
+  "ABC": "undefined",
+  "zp_stoken": "undefined",
+  "webpackJsonp": "undefined",
+  "__NUXT__": "undefined"
+ },
+ "cfgKeys": [],
+ "scriptCount": 14,
+ "inlineCount": 12,
+ "hasStoken": true,
+ "token": "12d8gNjcjw4DDscK8OikTOTYjOEAyNjc3Ojg5Nxg8Pjk4ODc5E8O6wrfDk8Ogw4xew4jDv8K9NyI3QDY2N0FAQTsSNzw%2BOTc4QT7EuMK4QEE%2BNiccwobDgcOlw5bDjVnDjg3DlcK4LsKVwrYpw7jDgALDjcK3DFbDgSgoDxEMXFtXEREKBhFhBwlWBwsRCQpWXBEKDVdbWwkGBxAeFkUQwrvCvsOAEMK8wr%2FCtxvCvMK4wrbDlcK8wrjDgT8%2BJzw4Hz46NjZANzzEucOVxL7Dg8OYxLnDicK2w43CksOlxLnEvsORSMS5wrkWwoPDsMOHxLnEvsOfw7nCuC5AwobCuUrEscWzxJfDqcSWwplMwpFYw7rCt8KVwpvCv1fCksKfwrHCqsOEwrTCjlvCqkPCgsK4wrJ6wr9UwqnCt091ZcK9cFHDgUjCtXVhTnVCaEMKFFkKDDwQwoYrw40%3D",
+ "seed": "hLsIpRAtbih0tEGPqldW+VmtOWCmzFqGzP98yXUl1SE=",
+ "ts": 1794368225693
+}
