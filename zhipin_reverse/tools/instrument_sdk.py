@@ -5,6 +5,7 @@
 """
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -38,6 +39,14 @@ def main() -> int:
     if n == 0:
         print("no call sites matched")
         return 2
+    # 语法自检：纯正则改写一旦落进字符串字面量/标识符中间，产出的就是坏脚本，
+    # 必须在这里拦住（上游 PR 复审正是抓到这一类问题）。
+    check = subprocess.run(["node", "--check", "-"], input=out, text=True,
+                           capture_output=True)
+    if check.returncode != 0:
+        print("语法自检失败，未写出文件：")
+        print((check.stderr or "").strip()[:600])
+        return 3
     out_path.write_text(out, encoding="utf-8")
     print(f"instrumented {n} call sites -> {out_path}")
     return 0
