@@ -1,5 +1,44 @@
 # 阿里云 FeiLin 拼图验证码逆向（tool.manmanbuy.com）
 
+> **2026-11-14 最新：已完全打通 —— 纯 Node 连续 5/5 通过（S3）**
+>
+> 无浏览器、无 SendInput、无硬件设备，一条命令：
+>
+> ```bash
+> node e2e_run_chain.js --gen human --submit
+> ```
+>
+> ```
+> post 13  gap=182  dataLen=1528  → {"captchaVerifyResult":true,"bizResult":true}
+> post 14  gap=169  dataLen=1304  → true
+> post 15  gap=160  dataLen=1404  → true
+> post 16  gap=166  dataLen=1752  → true
+> post 17  gap=202  dataLen=1384  → true
+> ```
+>
+> **两个独立难点，都已解决：**
+>
+> | 难点 | 解法 | 文件 |
+> |---|---|---|
+> | `data` 加密层（JSVMP 里自修改的 64 项查表变换） | 无密钥、可逆；两组同轮真实样本逐字节 0 差异 | [`feilin_data.js`](feilin_data.js) · [`verify_armour.js`](verify_armour.js) |
+> | **轨迹形态（S3 的真门槛）** | 真人「慢逼近 → 谷底犹豫 → 末端甩鞭 → 收尾」；平滑曲线是机器指纹 | [`e2e_15_human_track.js`](e2e_15_human_track.js) |
+>
+> 对照实验：同一套几何、同样 `flag=1`、device 遥测 200、加密逐字节正确 ——
+> **平滑轨迹 0/12，真人形态 5/5**。卡住的从来不是密码学，是轨迹像不像人。
+>
+> 读哪里：[`SLIDER_SOLVE.md`](SLIDER_SOLVE.md)（怎么用）· [`FINDINGS_2026-11-12.md`](FINDINGS_2026-11-12.md) §8.12（完整复盘）· [`docs/CASE.md`](docs/CASE.md)（案例与九条踩坑）
+>
+> 边界：**S4 未验证**（5 次都在同一小时内，跨天/连续续期未测）；仓库不含任何真实 `deviceToken`。
+
+> **2026-11-12 更新（SDK 已升级 1.5.4，请看 [`FINDINGS_2026-11-12.md`](FINDINGS_2026-11-12.md)）**
+>
+> 本文下方是 1.5.1 时期的记录，部分内容已过期（`DeviceData`、`feilin002.js`、`data = 魔数 + AES(轨迹)` 都已变）。当前结论：
+> - **deviceToken 生成公式已完全解开**：`base64("WEB#deviceId#AES(指纹,动态key)#len#" + MD5(前四段+"#daye,raolewoba!"))`
+> - **deviceToken 可复用**：纯 Node（`init_captcha_node.js`）用浏览器产出的 token 调 InitCaptcha 直接成功
+> - **data 明文结构已还原**：`deflate(JSON{TrackList:{mc,mu,mp,mm,...}, xPos, slidePos, arg})` 再经动态 JS 的自定义编码
+> - **data 编码层未复现**：实现在 `dynamicJS/3.29.0/pe.0xx.<hash>.js` 的 JSVMP 内（非 crypto-js、非 feilin075.js）
+> - **slideAuth 未通过**：位置正确仍被拒，归因于合成事件 `isTrusted=false` 被 SDK 记入 `TrackList.mm` 标记位
+
 ## 目标
 `https://tool.manmanbuy.com/m/aliVal.aspx` 的滑块验证码（阿里云 FeiLin PUZZLE 拼图），纯协议过滑块。
 
@@ -66,10 +105,22 @@ field[9] = "0"
 ## 拼图缺口识别（已验证 ✅）
 back.png 296×200，缺口左边缘在灰度骤降处（当前样本 x≈112-113）。算法：逐行找灰度从背景骤降到暗区的列，取众数。
 
-## 尚未破解（剩余工作）
-1. **data 字段（加密轨迹）**：FeiLin SDK 里的自定义加密（3 字节魔数 `25 13 27` + 自定义密文，非标准 AES/XOR）。位于 feilin149.js（575KB 混淆）。密钥 = DeviceConfig field[0]（动态密钥）。
-2. **deviceToken 生成**：设备指纹，位于 cloudauth-device SDK。
-3. **DeviceData**：InitCaptcha 请求参数，两次抓包完全相同（固定值，可复现），结构 = AES(PLATFORM#appName#sceneId#captcha-normal#prefix#region)。
+## 历史遗留问题（1.5.1 时期的判断，现均已解决）
+
+> 下面三条是当时的未解项，2026-11-14 全部打通，原文保留作对照：
+>
+> - **`data` 加密** —— 已解出。既不是 AES，也不是拿 `DeviceConfig.field[0]` 当密钥；
+>   而是 `dynamicJS/pe.0xx` 里一段**自修改的 64 项查表变换**（`armour`），**无密钥**、可逆。
+>   魔数 `25 13 27` 是**产物不是常量**（SEED 固定 + `T` 恒以 `eJ` 起步，前 3 字节自动算出），
+>   这就是当年静态搜 `251327` / `[37,19,39]` 永远搜不到的原因。
+> - **`deviceToken`** —— 已解出，见上方 2026-11-12 块的公式，且可直接复用。
+> - **`DeviceData`** —— 固定值，可直接打。
+> - 另外当年把 `slideAuth` 失败归因于 `isTrusted` 也是**错的**：换成 `SendInput` 真鼠标注入后
+>   `isTrusted=true`、`mm/mp` flag 全 1，仍然 false。真正的原因是轨迹形态。
+
+1. ~~**data 字段（加密轨迹）**~~ → 已解决，见 [`feilin_data.js`](feilin_data.js)
+2. ~~**deviceToken 生成**~~ → 已解决，见 2026-11-12 块的公式
+3. ~~**DeviceData**~~ → 固定值，已可复现
 
 ## 关键发现
 - DeviceData 是固定值（同一浏览器产生相同指纹），可直接硬编码或复现。
