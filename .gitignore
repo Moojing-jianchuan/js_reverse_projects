@@ -19,3 +19,5 @@ auth.json
 *secrets*.json
 venv/
 zhipin_reverse/tmp_*
+zhipin_reverse/data/
+zhipin_reverse/__pycache__/

@@ -1,126 +1,150 @@
 # zhipin_reverse
 
-BOSS直聘 `__zp_stoken__` 的本地生成与验证环境（jsdom 补环境 + 双路阶段对照）。
+BOSS直聘 `__zp_stoken__` 的**纯协议**取数方案：本地用 jsdom 跑官方 security SDK 铸 token，再由 Python 走 HTTP 完成挑战流程与翻页采集。
 
-## 当前状态
+> 最后验证：2026-11-17 —— 本地铸 token **被服务端受理**（`set/zpToken code=0` → joblist 返回 15 条/页），连续两次通过。
+> 对应 SDK：`security-js/b9a070d3.js`（323891 字节，sha256 `fb71e45a708d78317169196f0695f561c44af6e8852b7b571d3b7ef90f495fd2`）。
 
-| 层级 | 状态 | 说明 |
-|---|---|---|
-| S1 能生成 | ✅ | jsdom 产出 token；阶段数与 API 顺序与浏览器完全一致（754 / 21） |
-| S2 服务端受理 | ⚠️ 仅浏览器会话 | 真实 `security.html` 由浏览器打开可通过挑战（跳到 `jobs?_security_check=…`）；**token 脱离该会话一律 38/37** |
-| S3 命中数据 | ⚠️ 依赖 S2 | 浏览器通道可用；纯协议当前不可 |
-| S4 可持续 | ❌ | 未验证 |
+---
 
-环境快照一致度 **48/49**；唯一已知不可对齐项是 `p=14892`（时间/随机派生）。
-
-## 目录
+## 目录（只有这些文件，全部为运行所需）
 
 ```
-env_jsdom.js            jsdom 环境伪装核心（navigator/screen/window/canvas/webgl/CSS/iframe/cookie/storage）
-gen_token2.js           生成 token：node gen_token2.js <sdk> <seed> <ts> [pageUrl]
-main.py                 完整流程：python 取 seed → node 生成 token → 发送校验
-main_jsdom.js           纯 jsdom 的对照版本
-capture_env.py          采集真实浏览器环境写入 config/browser_env.json
-tools/                  插桩、双路对照、SDK 获取（见下）
-config/                 当前 SDK、插桩版、环境快照、security.html inline 脚本快照
-docs/notes.md           技术笔记：证据、消融、踩坑记录
+zhipin_client.py        协议采集器：取 seed → 本地铸 token → set/zpToken → 翻页 → JSONL
+gen_token2.js           单次铸 token：node --allow-natives-syntax gen_token2.js <sdk> <seed> <rawTs> [pageUrl]
+env_jsdom.js            jsdom 环境伪装核心（含全部环境修复，见下）
+env_extra.js            额外环境补齐（window 键集、PluginArray 等）
+env_extra_firefox.js    Firefox 152 实测键表（被 env_extra.js 引用）
+
+config/_sdk_b9a070d3.js 官方 SDK 原始字节（不要改动/不要用改写版）
+config/browser_env.json 浏览器环境快照（几何、canvas 真值、CSS 名集合等）
+config/security_5d7c1c55.html  挑战页 DOM 骨架
+config/security_inline.json    挑战页内联脚本快照
+
+package.json / package-lock.json / node_modules/   仅依赖 jsdom
 ```
+
+---
 
 ## 快速开始
 
-拿当前 SDK（浏览器网络里直接取，不走 API）：
+```powershell
+# 1) 依赖（已存在则跳过）
+pnpm install        # 或 npm install
 
-```bash
-python tools/find_sdk.py
+# 2) 端到端采集（本地铸 token，1 页）
+D:\python\python.exe zhipin_client.py --mint local --pages 1 --out data/jobs.jsonl
+
+# 3) 分页采集
+D:\python\python.exe zhipin_client.py --mint local --pages 3 --out data/jobs.jsonl
+
+# 4) 只铸一个 token（调试用）
+D:\nodejs\node.exe --allow-natives-syntax gen_token2.js config/_sdk_b9a070d3.js "<seed>" <rawTs>
 ```
 
-换版后一键接入（下载 → 插桩 → 双路对照 → 差异报告）：
+两阶段用法（需要复用同一会话时）：
 
-```bash
-python tools/onboard_sdk.py --name <8位hex>
-python tools/onboard_sdk.py --file config/_sdk_xxx.js
+```powershell
+D:\python\python.exe zhipin_client.py --phase seed --session config/session.json
+D:\python\python.exe zhipin_client.py --session config/session.json --token-file config/token.txt --pages 3
 ```
 
-手工对照（**顺序不能反**：浏览器跑完会把当次指纹写回 `config/browser_env.json`）：
+### 硬性要求
 
-```bash
-python tools/stage_run_browser.py <seed> <ts> tmp_browser_stages.json
-node   tools/stage_run_jsdom.js  <seed> <ts> tmp_jsdom_stages.json
-python tools/first_diff.py       tmp_browser_stages.json tmp_jsdom_stages.json
+- 铸 token 的 node 进程**必须**带 `--allow-natives-syntax`（`document.all` 的 undetectable 语义依赖 `%GetUndetectable()`；不带会让环境形态偏离）。
+- 请求必须走 **IPv4**（客户端已内置 `CURLOPT_IPRESOLVE=V4`；IPv6 出口会直接吃 `code 35`）。
+- `config/_sdk_b9a070d3.js` 必须是官方原始字节，**不要**用任何插桩/改写版本。
+
+---
+
+## 挑战流程与错误码
+
+```
+业务接口 → code 37 + zpData{name, seed, ts}
+   └─ 本地铸 token（jsdom 跑 SDK）→ 写 __zp_stoken__（值需 URL-encode）
+        └─ POST /wapi/zppassport/set/zpToken（空 body，Referer 带 ?_security_check=1_<ms>）→ code 0
+             └─ 重放业务接口 → code 0 + 数据
 ```
 
-生成 token：
+| code | 含义 | 处置 |
+|---|---|---|
+| `37` | 挑战，返回 seed | 正常，继续铸 token |
+| `38` | 环境自证不通过 | token 内容被拒；换 seed 重试 |
+| `35` | 出口 IP 风控 | **连 seed 都拿不到**，等冷却或换出口 |
 
-```bash
-node gen_token2.js config/_sdk_6d66a65a.js <seed> <ts>
-node gen_token2.js config/_sdk_6d66a65a.js <seed> <ts> "https://www.zhipin.com/web/passport/zp/security.html"
+---
+
+## 原理摘要
+
+```
+token = "4eeeg" + base64( UTF-8( t ) )        t 是 241 个码点
+t[i]    = (dl[i] + 28) ^ 1
+dl[3+j] = (src[j] + 3) ^ PAD[j % 5]           PAD = [50,56,53,49,50] = "28512"
+⇒ src[j] = ( ((t[j+3] ^ 1) - 28) ^ PAD[j%5] ) - 3
 ```
 
-`main.py` 是完整流程脚本（python 取 seed → node 生成 token → 发送），`main_jsdom.js` 是纯 jsdom 的对照版本。
+`src` 是 **238 字节记录流**，关键字段：
 
-## 工具
+| 槽 | 语义 | 说明 |
+|---|---|---|
+| 174 / 209 | `floor(ts/1000)` / `ts%1000` | 时间戳派生，两侧天然不同 |
+| 191 | `String(iframe.contentWindow.constructor).replace(/\s/g,'').length` | 原生性自证 |
+| 239 / 240 | `getOwnPropertyNames(document).length` / `Object.keys(document).length` | 文档形状 |
+| 236 / 238 | `Object.keys(window)` 派生 | 随页面状态漂，勿追 |
+| ~118..149 | `md5(canvas.toDataURL())` 的 32 位 hex | 渲染指纹 |
 
-| 工具 | 用途 |
-|---|---|
-| `tools/probe_ip.py` | 测出口：`--proxy http://127.0.0.1:7897`，`code 37` 表示出口干净、`35` 表示被风控 |
-| `tools/find_sdk.py` | 打开页面监听 response，抓当前 `security-js/<name>.js` 并落盘 |
-| `tools/onboard_sdk.py` | 新 SDK 一键接入：下载/插桩/浏览器侧/jsdom 侧/差异报告 |
-| `tools/instrument_sdk.py` | 把 169 处分发调用改写成 `__trace(p, args, ret)` |
-| `tools/prelude_stage.js` | 确定性 `Math.random`、阶段日志、API 日志、读探针 |
-| `tools/stage_run_browser.py` | 浏览器侧执行，并回写当次指纹到 `config/browser_env.json` |
-| `tools/stage_run_jsdom.js` | jsdom 侧执行（`ZP_PRE_EVAL` / `ZP_PROBE_READS` 可开关） |
-| `tools/first_diff.py` | 按执行顺序找第一个真实差异（自动跳过时间/随机阶段） |
-| `tools/stage_compare.py` | 阶段/取值摘要对照 |
-| `tools/env_compare.py` | 环境快照逐项对照 |
-| `tools/ablate.py` / `ablate_browser.py` | 单侧消融，定位某阶段依赖哪个环境项 |
-| `tools/capture_css.py` / `css_counter.py` | 采集/度量 CSS 枚举口径 |
-| `tools/stage_ctx.py` / `stage_window.py` / `read_compare.py` | 阶段上下文、窗口切片、读探针对照 |
+长度公式：`tokenLen = 5 + 4 * ceil((241 + 非ASCII数) / 3)`（实测 441~473 均可能出现）。
 
-## 关键机制
+---
 
-1. **SDK 由服务端下发**：`/web/passport/zp/security-js/<name>.js`，name 随版本变化（如 `cb43d3e3` → `6d66a65a`），只能在浏览器网络里看。
-2. **挑战流程**：`POST joblist.json` → `code 37` + `zpData.{seed,ts,name}` → 生成 token → 带 cookie `__zp_stoken__`（**必须 percent-encoded**）重发 → `code 0`。
-3. **token 一次性 / 有时效**：页面生成的 token 被用掉后再重放必 `37`；请求里只带 `__zp_stoken__` 即可通过，不需要 sseed/sts/sname。
-4. **token 含随机时间**：同 seed + 同 ts 也不可能逐字节复现，判据只能是服务端受理，不是等长或哈希。
+## 已实现的环境修复（都在 `env_jsdom.js` / `config/browser_env.json` 里，默认开启）
 
-## 已知差异
+| # | 修复 | 回退开关 |
+|---|---|---|
+| 1 | 删除 28 个 Firefox 上不存在的全局（`Fence`、`BackgroundFetchManager`…） | — |
+| 2 | 补 33 个页面 CSS 自定义属性（`getComputedStyle` 383 → 416 项） | `ZP_CSS_NO_PAGE_VARS=1` |
+| 3 | 不插 `CSSStyleDeclaration` 中间原型层（保持 `getPrototypeOf(style)` 直连名字表） | `ZP_CSS_DECLPROTO=1` |
+| 4 | `document.all` 活索引（长度活、下标也活；索引 `configurable:false`） | — |
+| 5 | 屏幕几何用真值（1920×1080 / inner 1920×927 / screenY 32 / cores 32） | 改 `config/browser_env.json` |
+| 6 | canvas 真值（`len=43806`、`md5=667ad57b…`） | 同上（换机器需重采） |
+| 7 | `document` 形状（`getOwnPropertyNames`=3、`Object.keys`=3） | `ZP_NO_DOC_SHAPE=1` |
+| 8 | iframe **子 realm** 的 `Window` 构造器 toString 返回原生形态（58 → 30 字符） | `ZP_NO_IFRAME_NATIVE=1` |
 
-| 项 | 状态 |
-|---|---|
-| CSS 原型名枚举（`p=19458`） | ✅ 已对齐：用浏览器里 SDK 实际枚举到的首段前缀（`cssSdkProto`，1152 项）建原型 |
-| 环境快照 | 48/49，仅 `deviceMemory` 表示方式不同（无实际影响） |
-| `p=14892` 及其派生（`p=14643`） | ⛔ 时间/随机派生，浏览器连续跑也是 23/29/30，不可对齐 |
-| token 长度 | 577 = 577 |
+其它调试开关：`ZP_SCRIPT_TAG=1`（用 `<script>` 标签注入）、`ZP_COOKIES='{"k":"v"}'`（预置 cookie）、`ZP_WINKEY_PAD=<n>`（补 window 键数）。
 
-## 出口（重要）
+---
 
-**结论：不需要代理——被封的只是本机 IPv6，强制 IPv4 直连就是干净的。**
+## 版本核验（重要）
 
-| 出口 | 结果 |
-|---|---|
-| 直连 IPv6（2409:8760:… 移动） | `code 35 您的IP地址存在异常行为` |
-| 直连 IPv4（`curl -4`） | **`code 37` + seed + name** ✅ |
-| Clash 代理 127.0.0.1:7897（境外 IP） | `code 37` 也能拿 seed，但浏览器/python 必须同出口 |
+这套东西会换版。**每次取到 seed 后顺手核一次 SDK 的 `len` + `sha256`**，与 `config/` 里的归档不一致就重新下载并重跑对照：
 
-用法：
-
-```bash
-python tools/probe_ip.py            # 直连（默认强制 IPv4）→ 37
-python tools/probe_ip.py --proxy http://127.0.0.1:7897
-python main.py                       # 完整链路（IPv4）
+```powershell
+# 期望：323891 / fb71e45a708d7831…
+$b = Invoke-WebRequest -Uri "https://www.zhipin.com/web/passport/zp/security-js/b9a070d3.js" `
+       -Headers @{ "User-Agent"="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0" } -UseBasicParsing
+$bytes = $b.RawContentStream.ToArray()
+$bytes.Length
+(-join ([System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }))
 ```
 
-代码层固定 IPv4：
+注意事项：
 
-```python
-from curl_cffi.const import CurlIpResolve, CurlOpt
-requests.post(url, ..., curl_options={CurlOpt.IPRESOLVE: CurlIpResolve.V4})
-```
+- **取 SDK 时不要开着任何在线改写/插桩路由**，否则拿到的字节数与厂商版不同（会误判"换版"），且产物载荷会变；
+- 换版后先跑 `gen_token2.js` 看能否出 token，再看长度是否落在 441~473，最后打一次服务端确认；
+- 换机器 / 换浏览器版本时，`config/browser_env.json` 里的 canvas 真值与几何要重采。
 
-浏览器侧：`Camoufox(firefox_user_prefs={"network.dns.disableIPv6": True})`。
+---
 
-## 注意
+## 已知限制
 
-- **先浏览器、后 jsdom**：Camoufox 每次启动随机化指纹，浏览器侧会把当次指纹写回配置。
-- 任何环境 A/B 都必须**单次采样 + 间隔拉长**；高频请求会触发 `code 35 IP 异常`，那时所有结果都不可信。
-- 插桩会改变函数身份/`toString`（本身是指纹），对照时两边必须用**同一份插桩**。
+- 出口 IP 请求过量会进风控（`code 35`），需冷却或用代理（`--proxy`）。
+- 分页第 2 页可能返回 `code 0` 但 `jobList` 为空，属分页参数/lid 问题，与 token 无关。
+- 槽 236/238 随浏览器页面状态漂移，本地未对齐（不影响受理）。
+
+---
+
+## 参考
+
+完整的逆向过程与结论（技术指纹、载荷公式、逐槽语义、8 个补丁的实测值、7 个坑）已整理进 skill 案例：
+
+`hello-js-reverse-skill/cases/boss-zhipin-zp-stoken-security-js-vmp.md`
