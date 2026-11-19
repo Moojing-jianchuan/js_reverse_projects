@@ -1,0 +1,23 @@
+{
+ "post": 8,
+ "tag": "P4-live-cvp",
+ "tookMs": 373,
+ "capturedAt": "2026-11-13T11:26:43.212Z",
+ "postedAt": "2026-11-13T11:26:46.517Z",
+ "ageSeconds": 3.3,
+ "req": {
+  "certifyId": "lQQfY7Llvi",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1332,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQz",
+  "data_len": 636,
+  "data_head16": "JRMnR3ZcXwBAeQIX"
+ },
+ "status": 200,
+ "respBody": "{\"captchaVerifyResult\":false,\"bizResult\":false}",
+ "respParsed": {
+  "captchaVerifyResult": false,
+  "bizResult": false
+ },
+ "verdict": false
+}

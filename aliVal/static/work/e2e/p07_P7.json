@@ -1,0 +1,65 @@
+{
+ "post": 7,
+ "tag": "P7",
+ "tookMs": 521,
+ "initFile": "20261113_192016_413",
+ "initCertifyId": "aiXm1k6ctB",
+ "initRequestId": "9094F301-A336-4F8B-A534-8F6D62A6C328",
+ "initImage": "qst/PUZZLE/online/915/00f16474-7b64-4f55-b475-f7436197881a/back.png",
+ "staticPath": "3.29.0/pe.056.6ae99cc113a64d5d",
+ "dataSummary": {
+  "gap": 95,
+  "xPos": "96",
+  "slidePos": "122",
+  "flag": "1",
+  "movement": 305,
+  "dragActualMs": 1653,
+  "preMs": 2800,
+  "mmPoints": 173,
+  "mpPoints": 342,
+  "xPosOverSlidePos": 0.787,
+  "arg": "uIYOWHOcxQKE8g==",
+  "argBytes": 10,
+  "dt": 4533,
+  "dataLen": 3548,
+  "dataHead16": "JRMlmg4wGQAxJCAI",
+  "nonce": "92050a6fab4298d376bc21b105fefbf3",
+  "lens": {
+   "plain": 8077,
+   "deflated": 1995,
+   "T": 2660,
+   "enc": 2660,
+   "data": 3548
+  },
+  "mmHead": "628,690,2800,1|632,690,2811,1|636,690,2817,1|640,690,2829,1|…",
+  "mc": "628,690,2800, ,1",
+  "mu": "933,696,4453, ,1"
+ },
+ "req": {
+  "url": "https://tool.manmanbuy.com/m/aliVal.aspx?method=slideAuth",
+  "certifyId": "aiXm1k6ctB",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1336,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQzZjkx",
+  "data_len": 3548,
+  "data_head16": "JRMlmg4wGQAxJCAI",
+  "body_len": 5167
+ },
+ "status": 200,
+ "respHeaders": {
+  "date": "Fri, 13 Nov 2026 11:20:17 GMT",
+  "content-type": "application/json; charset=utf-8",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "cache-control": "private",
+  "server": "Microsoft-IIS/10.0",
+  "x-aspnet-version": "4.0.30319",
+  "x-powered-by": "ASP.NET"
+ },
+ "respBody": "{\"captchaVerifyResult\":false,\"bizResult\":false}",
+ "respParsed": {
+  "captchaVerifyResult": false,
+  "bizResult": false
+ },
+ "verdict": false
+}

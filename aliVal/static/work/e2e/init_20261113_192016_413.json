@@ -1,0 +1,41 @@
+{
+ "stamp": "20261113_192016_413",
+ "tokenSrc": "capture",
+ "deviceToken": "V0VCI2FiMDM0ZWMwNjQzZjkxMzk5ZWIzM2UwNjJkYzdmYWUxLWgtMTc5NDU2NTYzNTk5MC03YWNiMWM0MjRhNzU0OTM0ODE0YWJkY2M1YTRiOTEwOSNhQkNGZ3RzWjVGL2Yyc1lzTlc4ME04YTREWlVJMGhFVWlQL0xERnpBUEtScTdqa0RBUk5JZUZESGw0NFpNMzFCMWc2YUNHbktSdDhyY3JwMHRUL0E3QXBHVEtidDNTU2laVkVGbS8wdjJrVlNDL09mTzdpNFgzNUpIbU9aOCtNcW92a0xjTGI1UG45MW5Cdk1mODJsT1U1WnZDdzNNenFZRzlsd05TRGNoVFoyUWVnbzRTcnpkVGFLb3V3dEFxemxlblFVdk5mMUl0bmRVQURqZE54Qm93QmZLRW9UZ2xWd0NrcldKUkxabmlaZ3AzbG85TWEvTEJhN3QvbTBjQ2RSUTdCeXBtV0VVYS96WDcrNVJIMHMzNTNRMFYxRUlrRzZib3p2WjA4b1liejFiREQ0YjRSYXFIQ2UwRWdMV0tTbEViT0YybDRReHF1cTh4ekdqWDVmSWxFb1dFWDFUeEtQTm04cmxqdVBiM0IrUERLN2RiL2xmZitxY2lrU2N0RXVlaG5IMmJTaE8zR1ZKKzRXZ2pCSEJVKzlMMThQd2JrTldpNFJkLzFNR2xQZkgzbmlDdUlEYXJKSktQdGNWVHYvNGd5UDFpcSs4TmdXSWZHeXBia1Z1ZVNOSCtiVXkrQWpkQ0N5Z0Q2cDlFa1pFclJQM01zUHNXZjB5OU5pOWZFS1Y4UW5Oam9EVjlhalVhMVJKOVN1ZzZvUnlMMFA2dDFFdjFsUmppSDIrZjdNbGIvUVpXbTN4MXExWUlpMVI0NkEwcnZtVzVJSXpEVHF4SGJSSlFvcnJtbFNBclpKODlDMEpXamNpeW5VM1JpZzA4aElUQTAwcFJIWHpQNUFOZFZJbUhXOStTaUUzaWxQRlByRDJCRmlIZUhJNk9BZ3JBZWJITU1zZ3V0czhqeTBMSE8vbEpnRStYc0tzRGV0MVdRYkZFVjJoWEh6dFQrRXo0YmltWEJNcDJ3Zld6ZThLUHhqTmUrWE8yck1DK2hOcjlZbFFOTE9aOHFtdEdOR2JxemwwTFFNZkxBNW5yRmFaQ3FXS3Y3WGhQN0t5OEVET2RoZnR1eSthNmhuK20zd0VzVEJ0bUFkYjJuSVBBTHJwd2JVSFB5b0tPOVNzSUdvTXJ0MndrNUl4a01zRjhocnRZbkFtUTN5Z0w5dnBzST0jMjI0OCNjODhmZmNjODkxOGQyMTAyYjZkMDdhOTU4MGUzNGU2NA==",
+ "deviceToken_len": 1336,
+ "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQzZjkx",
+ "initStatus": 200,
+ "initBody": {
+  "CertifyId": "aiXm1k6ctB",
+  "Message": "success",
+  "RequestId": "9094F301-A336-4F8B-A534-8F6D62A6C328",
+  "Image": "qst/PUZZLE/online/915/00f16474-7b64-4f55-b475-f7436197881a/back.png",
+  "Code": "Success",
+  "LimitFlow": false,
+  "Success": true,
+  "StaticPath": "3.29.0/pe.056.6ae99cc113a64d5d",
+  "CaptchaType": "PUZZLE",
+  "PuzzleImage": "qst/PUZZLE/online/915/00f16474-7b64-4f55-b475-f7436197881a/shadow.png"
+ },
+ "cookies": "acw_tc=2f6a1fb117945688157502713eb7bdc18e2a0051348baa0b75879d6e3d4488; ASP.NET_SessionId=pt1jyobtlcpd350nt3rawnyk",
+ "back": {
+  "url": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/00f16474-7b64-4f55-b475-f7436197881a/back.png",
+  "status": 200,
+  "bytes": 54003,
+  "path": "D:\\ds_work\\js_reverse_projects\\aliVal\\static\\work\\e2e\\img_20261113_192016_413\\back.png",
+  "size": [
+   296,
+   200
+  ]
+ },
+ "shadow": {
+  "url": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/00f16474-7b64-4f55-b475-f7436197881a/shadow.png",
+  "status": 200,
+  "bytes": 2538,
+  "path": "D:\\ds_work\\js_reverse_projects\\aliVal\\static\\work\\e2e\\img_20261113_192016_413\\shadow.png",
+  "size": [
+   52,
+   200
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "stamp": "20261113_184909_370",
+ "tokenSrc": "capture",
+ "deviceToken_len": 1336,
+ "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQzZjkx",
+ "initStatus": 200,
+ "initBody": {
+  "CertifyId": "iTQqK4LlNf",
+  "Message": "success",
+  "RequestId": "10BB4D3E-AD22-4148-AB59-79BE58E5F169",
+  "Image": "qst/PUZZLE/online/915/ee8e482c-6601-45f1-a5d1-d62f5185966d/back.png",
+  "Code": "Success",
+  "LimitFlow": false,
+  "Success": true,
+  "StaticPath": "3.29.0/pe.077.b1b6f0c91d158f85",
+  "CaptchaType": "PUZZLE",
+  "PuzzleImage": "qst/PUZZLE/online/915/ee8e482c-6601-45f1-a5d1-d62f5185966d/shadow.png"
+ },
+ "cookies": "acw_tc=784e2c8617945669487043945e3cd187b9d3938a17d79781f4739aea2329c8; ASP.NET_SessionId=cxteru3tatrv2xoscbxggele",
+ "back": {
+  "url": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/ee8e482c-6601-45f1-a5d1-d62f5185966d/back.png",
+  "status": 200,
+  "bytes": 40084,
+  "path": "D:\\ds_work\\js_reverse_projects\\aliVal\\static\\work\\e2e\\img_20261113_184909_370\\back.png",
+  "size": [
+   296,
+   200
+  ]
+ },
+ "shadow": {
+  "url": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/ee8e482c-6601-45f1-a5d1-d62f5185966d/shadow.png",
+  "status": 200,
+  "bytes": 2264,
+  "path": "D:\\ds_work\\js_reverse_projects\\aliVal\\static\\work\\e2e\\img_20261113_184909_370\\shadow.png",
+  "size": [
+   52,
+   200
+  ]
+ }
+}

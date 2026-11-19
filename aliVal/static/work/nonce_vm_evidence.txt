@@ -1,0 +1,19 @@
+interpreter D at pe.081:210303 (3978 chars)
+bytecode   F at pe.081:218528 (16838 words)
+constants  W at pe.081:263287 (291 entries)
+call site  pe.081:289715   re = J.q( D(0,[],F,W,e5,[re, <str>]), re )
+
+offline runs (a={r:1} so the program returns the stack top):
+  run 0: "9e0879a1bd8cf468da5e84e5e7a54201"  (len=32, hex32=true)
+  run 1: "a109aa87d4baa5dea068ab43b675a401"  (len=32, hex32=true)
+  run 2: "76ee23f49a2700533f7ba5d73d4a8501"  (len=32, hex32=true)
+  run 3: "092f471b612435e5074fc27389cbd801"  (len=32, hex32=true)
+  run 4: "a655a4a2781b114ffa7075db7aaa5b01"  (len=32, hex32=true)
+
+input-independence check (different arg, same generator):
+  arg="" -> 22f8e9eefa465e60e9438d256a248501
+  arg="AAAA" -> ecd5096885937dd36cbd7ebe4f3ffd01
+  arg="eJzdlU1P" -> 992d9c49a91b12d736587d70fa1aff01
+
+nonce actually observed in the captured payload:
+  f108d668874fd2950f66f503740c115d

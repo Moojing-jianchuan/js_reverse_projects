@@ -1,0 +1,52 @@
+{
+ "at": "2026-11-13T19:36:28",
+ "state": {
+  "down": 1,
+  "move": 460,
+  "up": 1,
+  "trustedDown": 1,
+  "trustedMove": 460,
+  "knobStart": 258,
+  "knob": 0,
+  "pieceStart": 0,
+  "piece": 627,
+  "btoa": 16,
+  "btoaLens": [
+   1000,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   3211
+  ],
+  "xhr": [
+   {
+    "u": "/m/aliVal.aspx?method=slideAuth",
+    "req": "captchaVerifyParam=%7B%22sceneId%22%3A%22vollz84f%22%2C%22certifyId%22%3A%22FnddZkAdQ3%22%2C%22deviceToken%22%3A%22V0VCI2FiMDM0ZWMwNjQzZjkxMzk5ZWIzM2UwNjJkYzdmY",
+    "status": 200,
+    "resp": "{\"captchaVerifyResult\":true,\"bizResult\":true}"
+   },
+   {
+    "u": "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com",
+    "req": "AaduaneId=DuaneAprqkYsF3nt1yjK29Bf&Version=2020-10-15&SignatureMethod=HMAC-SHA1&SignatureVersion=1.0&Format=JSON&Action=Log3&Data=0blQ85dGJrY0HYY8GlS4tTBVuksZpL",
+    "status": 200,
+    "resp": "{\"ResultObject\":true,\"RequestId\":\"01A1D4B1-D6F5-56D4-A62E-0EABAC72AC88\",\"Code\":\"200\"}"
+   }
+  ],
+  "ajax": [
+   {
+    "url": "/m/aliVal.aspx?method=slideAuth",
+    "len": 7163
+   }
+  ],
+  "alert": [],
+  "err": [],
+  "slider": true
+ }
+}

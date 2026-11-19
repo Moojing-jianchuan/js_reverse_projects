@@ -1,0 +1,27 @@
+{
+ "post": 1,
+ "tag": "P1-replay-capture",
+ "url": "aliVal.aspx?method=slideAuth",
+ "tookMs": 591,
+ "reqSummary": {
+  "certifyId": "JUTn1nkoDx",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1336,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQzZjkx",
+  "data_len": 716,
+  "data_head16": "JRMnXwxEGgEELwIX",
+  "captured_at": "2026-11-13T18:27:23"
+ },
+ "status": 200,
+ "respHeaders": {
+  "date": "Fri, 13 Nov 2026 10:47:50 GMT",
+  "content-type": "application/json; charset=utf-8",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "cache-control": "private",
+  "server": "Microsoft-IIS/10.0",
+  "x-aspnet-version": "4.0.30319",
+  "x-powered-by": "ASP.NET"
+ },
+ "respBody": "{\"captchaVerifyResult\":false,\"bizResult\":false}"
+}

@@ -1,0 +1,24 @@
+{
+ "gap": 217,
+ "target": 549.83,
+ "off_final": 550.3,
+ "err_final": -0.47,
+ "trusted_seen": true,
+ "moves": 460,
+ "converged": true,
+ "pre_hold_ms": 732,
+ "block": 430,
+ "dt": [
+  8,
+  11
+ ],
+ "trace": [
+  {
+   "blk": 1,
+   "off": 0.0,
+   "rem": 549.83,
+   "moves": 0
+  }
+ ],
+ "param_received": false
+}

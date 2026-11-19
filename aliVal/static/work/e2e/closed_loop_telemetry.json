@@ -1,0 +1,57 @@
+{
+ "gap": 155,
+ "target": 392.7,
+ "off_final": 392.0,
+ "err_final": 0.7,
+ "trusted_seen": true,
+ "iterations": 6,
+ "trace": [
+  {
+   "it": 1,
+   "off": 0.0,
+   "target": 392.7,
+   "err": 392.7,
+   "commanded": 0.0
+  },
+  {
+   "it": 2,
+   "off": 82.9,
+   "target": 392.7,
+   "err": 309.9,
+   "commanded": 216.0
+  },
+  {
+   "it": 3,
+   "off": 242.5,
+   "target": 392.7,
+   "err": 150.3,
+   "commanded": 386.4
+  },
+  {
+   "it": 4,
+   "off": 349.9,
+   "target": 392.7,
+   "err": 42.9,
+   "commanded": 469.1
+  },
+  {
+   "it": 5,
+   "off": 383.1,
+   "target": 392.7,
+   "err": 9.7,
+   "commanded": 492.7
+  },
+  {
+   "it": 6,
+   "off": 392.0,
+   "target": 392.7,
+   "err": 0.7,
+   "commanded": 498.0
+  }
+ ],
+ "submit": true,
+ "cvp": {
+  "certifyId": "Bu81RaNcWE",
+  "dataLen": 992
+ }
+}

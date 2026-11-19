@@ -1,0 +1,23 @@
+﻿const fs=require('fs');
+const {decodeData,summarize}=require('./e2e_05_decode');
+const zlib=require('zlib');
+const data="JRMnR3FRGiMELwIXHGsINnPiaJw6BBdqehoabX1LDBMyfE9c73YXS9wBEqRYEyRSzEgFcHFRLkKEjwT3iZ8aJZhQK3dDSQ4sB2rnGR9CEaY4WEdCNypPT+BCHIdvekA8dsmYHzh/MeQSUH4Th5ZAiBmWi11WwCVl+SWSYH7Tjs55mQRtaBZvZgxxD3tSrxlQ1XB56D9bfzoNZhNpyQSRBm5jTgd/dDh9z4hiWBoDAwBbdUJjRjCoJvWbZyt8a28HSCl6PHJoRn5xKiAuVn4fWHB1YcQtdyQ4sQ4/rh1oUspQX7hRmDIMrWZtxiSBVx6bIUbQRFNZbV9zATcYFF9zsVQlcCi2CG8kgCMAfG1DCgIPbl5NDbonUz1UZw5dZQhhamJ271MDa9f9Diu6wypBWC/fAx4yQO33o30lC5XmA4CTDmY3Qz2ND2AHSVMmMH1lL4ZLHOEpT9M2b0VKPddTCUl8XRZG/iVrHy9mPwAzD5BwJcUcNygsMDHLpMzbB5Nva3kuDh0NR34LID81Gf0zRysmP0I9VSclIf8Ka25Fi0RDdhw9YCcLlcdadWzdkwtXUKAfPKCv3nKkG7yidbYloKdQbUw2Ti4hLztbM7lTTTScPDIkRbBHQTQRKBg9XQxNBwAo6TxRZGMcU0F9OEpyNHUmFatGXhfxF4E2Nf90SKdyRmgtF0lze/Xed05pNiUfdEEKAwkYGWAxTQtHK1g0QfzzjXXWXVsjF0ZCRFUZHgspaH7vIXLiWRD1CK2pJx4GBjwNsg==";
+const T="eJzlVE1r3DAQ/StFZxFm9DEaBXIo9JhDoaE5e7PexaRuy+62JCT5752ZXU/bhYZeeioYy09+fpqnedZqLMN6nXJPDKXl1YY7DitCWKUyjJWews1uuLu/nvaHcPkU5rtwGUrJkXqKuWcu8U2EEMNBX8g4f5MRwRnMdWGMJ8ZXlaBfJeC5sOIsuAAKrqAYFSMrTgu/5Kq4OL9mxeR86orZ+UyCCRZ+haQ4LfyaQLEXXLPxyfmmT+x802/gfNNvaeHrSoLLwifTb+6XclPsfsn02f1SUz67X2Lls/ttps/ut5k+u99m9Xf326r67e63Wf3d/Tarv7tfNv3ufhmVj+CG2RqA4I7ZVjj13D7RJbTj8/dTy+ez1OgSr0UgnUWgn0WA/nEE2usRsBb91xGgv4nA89k5IBPYe2ydZKJLE1Cycb8/ZmQzHcf9YdgdbqZZTgts0lpqculehr0yUP9Pu3GtPx86pij7HhOUC2CknGRTgVAqVE54icdz7MMf1T+Ou2nz+NsrAukZxvDw/osWmVLW+j5N6/E0UTTlw24rz7f89t3ttP1c5ikP26ur8PIDkAI0Nw==";
+const r=decodeData(data);
+console.log('magic',r.magic,'Tlen',r.Tlen,'err',r.err);
+console.log('T from page equals unarmoured T?', r.T===T);
+if(!r.payload){console.log('no payload');process.exit(1);}
+const j=r.payload.json,TL=j.TrackList;
+console.log('nonce',r.payload.nonce);
+console.log('xPos',j.xPos,'slidePos',j.slidePos,'arg',JSON.stringify(j.arg));
+console.log('TrackStartTime',j.TrackStartTime,'VerifyTime',j.VerifyTime,'dt',j.VerifyTime-j.TrackStartTime);
+console.log('mc',TL.mc);
+console.log('mu',TL.mu);
+console.log('tmv',JSON.stringify(TL.tmv),'tc',JSON.stringify(TL.tc),'te',JSON.stringify(TL.te),'ks',JSON.stringify(TL.ks),'fi',JSON.stringify(TL.fi));
+console.log('si',TL.si);
+const mm=TL.mm.split('|'), mp=TL.mp.split('|');
+console.log('mm n='+mm.length,'first',mm[0],'last',mm[mm.length-1]);
+console.log('mm xs:',mm.map(s=>s.split(',')[0]).join(','));
+console.log('mp n='+mp.length,'xs:',mp.map(s=>s.split(',')[0]).join(','));
+const m0=+mm[0].split(',')[0], mN=+TL.mu.split(',')[0];
+console.log('movement(mu-mc)',mN-m0,'| movement/2.5 =',((mN-m0)/2.5).toFixed(3),'| movement/2.5333 =',((mN-m0)/2.5333).toFixed(3));

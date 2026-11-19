@@ -1,0 +1,7 @@
+[
+  { "name": "s1", "truth": 178, "back": "config/images/s1_back.png", "shadow": "config/images/s1_shadow.png" },
+  { "name": "n1", "truth": 232, "back": "config/images/n1_back.png", "shadow": "config/images/n1_shadow.png" },
+  { "name": "c2", "truth": 212, "back": "config/images/c2_back.png", "shadow": "config/images/c2_shadow.png" },
+  { "name": "cur", "truth": 245, "back": "config/images/cur_back.png", "shadow": "config/images/cur_shadow.png" },
+  { "name": "back_old", "truth": 160, "back": "config/images/back.png", "shadow": "config/images/shadow.png" }
+]

@@ -1,0 +1,29 @@
+{
+ "armed": "inst",
+ "hits": [
+  {
+   "len": 468,
+   "b64len": 624,
+   "stack": [
+    "window.btoa@debugger eval code:12:46",
+    "t@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:211579",
+    "tc@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:296634",
+    "nm@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:333710",
+    "nb/o.N@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:333140",
+    "nb@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:333373",
+    "tc/n8.w@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:293946",
+    "tc/u<@https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.069.bcf01ca00f5bd260.js:1:289715",
+    ""
+   ],
+   "b64": "JRMnX0ohAgVAeQITam5Z5mLwt0MgEgU8tm0BF0Wl"
+  }
+ ],
+ "cvpLen": 2006,
+ "drag": {
+  "sx": 307.79998779296875,
+  "sy": 753.4000244140625,
+  "dist": 500,
+  "fired": 26
+ },
+ "inst": "object"
+}

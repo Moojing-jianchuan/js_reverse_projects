@@ -1,0 +1,55 @@
+{
+ "post": 15,
+ "tag": "chain",
+ "tookMs": 81,
+ "initFile": "20261113_234153_468",
+ "initCertifyId": "NtK2EOMBlM",
+ "initRequestId": "09033013-5242-404B-A980-2018C734639A",
+ "initImage": "qst/PUZZLE/online/915/05646f71-c6cd-46e5-b7da-097fc22c7f4b/back.png",
+ "staticPath": "3.29.0/pe.072.64e9154e3053635f",
+ "dataSummary": {
+  "gap": 160,
+  "xPos": "162",
+  "slidePos": "206",
+  "flag": "1",
+  "movement": 515,
+  "frames": 102,
+  "durationMs": 864,
+  "speedMax": 13742,
+  "peakAt": 0.802,
+  "yStd": 29.6,
+  "dtMed": 5.54,
+  "zeroPct": 4.9,
+  "negFrames": 0,
+  "arg": "ppiqQOjJXjCCLg==",
+  "dataLen": 1404,
+  "dataHead16": "JRMnXw9dGiIhLCAL"
+ },
+ "req": {
+  "url": "https://tool.manmanbuy.com/m/aliVal.aspx?method=slideAuth",
+  "certifyId": "NtK2EOMBlM",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1336,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQzZjkx",
+  "data_len": 1404,
+  "data_head16": "JRMnXw9dGiIhLCAL",
+  "body_len": 2931
+ },
+ "status": 200,
+ "respHeaders": {
+  "date": "Fri, 13 Nov 2026 15:41:53 GMT",
+  "content-type": "application/json; charset=utf-8",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "cache-control": "private",
+  "server": "Microsoft-IIS/10.0",
+  "x-aspnet-version": "4.0.30319",
+  "x-powered-by": "ASP.NET"
+ },
+ "respBody": "{\"captchaVerifyResult\":true,\"bizResult\":true}",
+ "respParsed": {
+  "captchaVerifyResult": true,
+  "bizResult": true
+ },
+ "verdict": true
+}

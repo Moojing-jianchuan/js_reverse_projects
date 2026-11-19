@@ -1,0 +1,23 @@
+{
+ "post": 10,
+ "tag": "P10-humanlike",
+ "tookMs": 329,
+ "capturedAt": "2026-11-13T19:44:42",
+ "postedAt": "2026-11-13T11:44:45.129Z",
+ "ageSeconds": 3.1,
+ "req": {
+  "certifyId": "AYpUxangaG",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1336,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQz",
+  "data_len": 4232,
+  "data_head16": "JRMnX3NRXi8xUSAI"
+ },
+ "status": 200,
+ "respBody": "{\"captchaVerifyResult\":false,\"bizResult\":false}",
+ "respParsed": {
+  "captchaVerifyResult": false,
+  "bizResult": false
+ },
+ "verdict": false
+}

@@ -1,0 +1,54 @@
+{
+ "summary": {
+  "template": "config/cvp_sample_1.json",
+  "zoom": 2.5,
+  "sampleMovement": 501,
+  "targetMovement": 515,
+  "scale": 1.0279,
+  "gap": 206,
+  "slidePos": 206,
+  "xPos": "158",
+  "argMode": "copy",
+  "arg": "eEUW80tpdzE3pA==",
+  "argBytes": 10,
+  "trackStartTime": 1794567394130,
+  "verifyTime": 1794567399804,
+  "delta": 5674,
+  "mmPoints": 27,
+  "mpPoints": 24,
+  "mmFirst": "308,753,5011,0",
+  "mmLast": "947,867,5689,1",
+  "lens": {
+   "plain": 1117,
+   "deflated": 388,
+   "T": 520,
+   "enc": 520,
+   "data": 696
+  },
+  "nonce": "fcd390423903a5332549002f632f715f",
+  "dataHead16": "JRMnXwxDXy4KLAIT",
+  "dataLen": 696
+ },
+ "data": "JRMnXwxDXy4KLAITRQJENkf8s5okdDc2VW09PitYwAw4bE5A67V7aT4QAoAaOONL71UJMBtfLEG15v4bpo9yF5Am6wVtUm0KMScIGndSZUIHOXMiPB8ZUusmE30FbT/VRgNK8yB2F/NJe1IgVmwo8z+VSJVpkDpYLD6XerE1m559hjJ+ECcqYBBTeRNlvzoDJVRy9iRPazMLJzd4AXGVH2weSjoUlDJtymh3VDQzVT1xdWw8Ti6ZLh2friAIeYc2KjVFd1JnIUxVPnYnNX8aJQYCd9kqbnztqDcqug0YsicoqLpavt8ttERs6F1vTB20IyBpdXRQJDh6AihzFFdiQSQbEQpEbDgKdHcPS15RMAUfd0REHmoMIUBRWTywNhRkYb9x/ZJOQ/cM7WayBwMjpMHSA9wQEoy/rHle80HifnBWFGH3ABqMDwVOUFcab0YAQXtBMRILQCVGZ0FSPyUSeohVnRZdCD9uLgd0EChQC1YzPh9hJCsNMnzovfHT2UdwfUZKFB1hW1w/+ShmcBZHLj0aSzJ8XgBtI+VwYSQkR0pDaSwLb2IgR+lKsmvqazAHVbUQVoK/5iS6WdyUErd0s29baBVqbVsiGhgkAZxQVF2bMjw8aLMeMSoeYXMsb1BJB10p/TVQA31GRqFDLFpvVIIkF3E7Yf0mUmI/H+pHULtGbCxoHXstGA==",
+ "payload": {
+  "TrackList": {
+   "mc": "308,753,5011, ,0",
+   "tc": "",
+   "mu": "823,754,5673, ,0",
+   "te": "",
+   "mp": "330,753,5042,0|351,753,5063,0|374,753,5088,0|393,754,5117,0|415,753,5150,0|438,753,5167,0|458,753,5188,0|480,754,5213,0|502,753,5241,0|522,753,5273,0|543,753,5290,0|566,754,5311,0|587,753,5336,0|608,753,5364,0|631,753,5397,0|650,754,5413,0|672,753,5434,0|695,753,5458,0|715,753,5487,0|737,754,5520,0|759,753,5537,0|779,753,5558,0|800,753,5583,0|823,754,5612,0",
+   "tmv": "",
+   "mm": "308,753,5011,0|330,753,5042,0|351,753,5063,0|374,753,5088,0|393,754,5117,0|415,753,5150,0|438,753,5167,0|458,753,5188,0|480,754,5213,0|502,753,5241,0|522,753,5273,0|543,753,5290,0|566,754,5311,0|587,753,5336,0|608,753,5364,0|631,753,5397,0|650,754,5413,0|672,753,5434,0|695,753,5458,0|715,753,5488,0|737,754,5520,0|759,753,5537,0|779,753,5558,0|800,753,5583,0|823,754,5612,0|823,754,5673,0|947,867,5689,1",
+   "ks": "",
+   "fi": "",
+   "startTime": 1794567394130,
+   "si": "1266,2048,977,1266,977,1040,1152,169.4915254237288,1280"
+  },
+  "TrackStartTime": 1794567394130,
+  "VerifyTime": 1794567399804,
+  "xPos": "158",
+  "slidePos": "206",
+  "arg": "eEUW80tpdzE3pA=="
+ },
+ "deflate_b64": "eJztk7tu1EAUhl8FnfooOte5WEpBkY4CiQD1atdGVrBY7ToIiPPuaC4WIlI6Sir7m3/+c9VMx5NmMtFMenBVcctEMgWVKbJPT3B/ORwf3s3XFYYnWI4wgFLC6IpOzPgGCRDWcg4IyyMMkEQxuqGHqLs+dv1c/Erdb4K0qXPHoAWjdUypYO7BmCPSZuxNZaeC2kvhUFXfsXotUfMKl8hO0lQxLig7xqqadswlsofQvMr1copNVQ1IW9hHoMEKam9BcykjeM9rNW+IPZFpvZx7C6Va2uLekaXijRqb16WUET031bWqccfqTdQn6akk+jN4ljb25Xuf+/Jyb7T9X8Mra0j/dA3bX8+BtmwRU4joIWVkQHi4th1Nc/te18NlvZ+XEQaO2YotGyshXMsNlhBQyBLmGLFS/SEjZHZBDvnGMru4iUZJCVkSwTO2p/zh1fCfxss8/Xwh5USG8OP9t1IleyoFfp1PYzsQCoBwuHyBAca7j58TrefTrzs9v729heffWh777g=="
+}

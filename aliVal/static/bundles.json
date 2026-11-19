@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-13T17:39:52.224420+08:00",
+  "bundles": [
+    {
+      "url": "https://g.alicdn.com/captcha-frontend/FeiLin/1.5.4/feilin076.dfd7a591c9db19810526fb604370c75de8180c860b769065ed2bf50d727dc4b1.js",
+      "file": "bundles/feilin076.dfd7a591c9db19810526fb604370c75de8180c860b769065ed2bf50d727dc4b1.js",
+      "bytes": 625942,
+      "sha256": "dfd7a591c9db19810526fb604370c75de8180c860b769065ed2bf50d727dc4b1",
+      "fetched_at": "2026-11-13T17:39:52.224420+08:00",
+      "content_type": "application/javascript",
+      "last_modified": null,
+      "etag": null,
+      "status": "ok"
+    },
+    {
+      "url": "https://g.alicdn.com/captcha-frontend/dynamicJS/3.29.0/pe.081.a2ede546e341a1b9.js",
+      "file": "bundles/pe.081.a2ede546e341a1b9.js",
+      "bytes": 446355,
+      "sha256": "6d8c7d0a038d9744173353e10d923f1310e26638e9d46efd025bdcd092a7cc10",
+      "fetched_at": "2026-11-13T17:39:52.224420+08:00",
+      "content_type": "application/javascript",
+      "last_modified": null,
+      "etag": null,
+      "status": "ok"
+    },
+    {
+      "url": "https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js",
+      "file": "bundles/AliyunCaptcha.js",
+      "bytes": 226363,
+      "sha256": "4d3e160b24d900ea238e510841d9b287899dd4645a5dd562c0c59dacf09cd0cf",
+      "fetched_at": "2026-11-13T17:39:52.224420+08:00",
+      "content_type": "application/javascript",
+      "last_modified": null,
+      "etag": null,
+      "status": "ok"
+    }
+  ]
+}

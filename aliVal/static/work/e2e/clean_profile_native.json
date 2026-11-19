@@ -1,0 +1,134 @@
+{
+ "mode": "native",
+ "profile": "C:\\Users\\卢\\AppData\\Local\\Temp\\rdp_dbg_3gd_kapa",
+ "gap": 238,
+ "target": 603.04,
+ "off_final": 602.8,
+ "err": 0.2400000000000091,
+ "moves": 460,
+ "trace": [
+  {
+   "phase": "main",
+   "off": 0.0,
+   "rem": 603.04
+  },
+  {
+   "phase": "fine",
+   "off": 541.5,
+   "rem": 61.54
+  },
+  {
+   "phase": "fine",
+   "off": 599.13,
+   "rem": 3.91
+  },
+  {
+   "phase": "fine",
+   "off": 600.97,
+   "rem": 2.07
+  },
+  {
+   "phase": "fine",
+   "off": 604.67,
+   "rem": -1.63
+  },
+  {
+   "phase": "fine",
+   "off": 602.8,
+   "rem": 0.24
+  }
+ ],
+ "diag": {
+  "net": [
+   {
+    "u": "/m/aliVal.aspx?method=slideAuth",
+    "m": "POST",
+    "err": null,
+    "status": 200,
+    "readyState": 4,
+    "statusText": "OK",
+    "hdrs": "cache-control: private\r\nconnection: keep-alive\r\ncontent-type: application/json; charset=utf-8\r\ndate: Fri, 13 Nov 2026 11:55:07 GMT\r\nserver: Microsoft-IIS/10.0\r\ntransfer-encoding: chunked\r\nx-aspnet-ver",
+    "at": 1794570906583,
+    "resp": "{\"captchaVerifyResult\":false,\"bizResult\":false}"
+   },
+   {
+    "u": "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com",
+    "m": "POST",
+    "err": null,
+    "status": 200,
+    "readyState": 4,
+    "statusText": "OK",
+    "hdrs": "access-control-allow-origin: *\r\naccess-control-expose-headers: *\r\nconnection: keep-alive\r\ncontent-length: 85\r\ncontent-type: application/json;charset=utf-8\r\ndate: Fri, 13 Nov 2026 11:55:08 GMT\r\netag: 8",
+    "at": 1794570906655
+   }
+  ],
+  "perf": [
+   {
+    "name": "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com/",
+    "dur": 2760,
+    "transfer": 0,
+    "enc": 440,
+    "status": 200,
+    "proto": "",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://1sfr0c.captcha-open.aliyuncs.com/",
+    "dur": 5007,
+    "transfer": 0,
+    "enc": 0,
+    "status": 0,
+    "proto": "",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://1sfr0c.captcha-open.aliyuncs.com/",
+    "dur": 1377,
+    "transfer": 0,
+    "enc": 518,
+    "status": 200,
+    "proto": "",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/bded3734-383",
+    "dur": 2605,
+    "transfer": 2324,
+    "enc": 2024,
+    "status": 200,
+    "proto": "http/1.1",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://static-captcha.aliyuncs.com/qst/PUZZLE/online/915/bded3734-383",
+    "dur": 4070,
+    "transfer": 53860,
+    "enc": 53560,
+    "status": 200,
+    "proto": "http/1.1",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://cloudauth-device-dualstack.cn-shanghai.aliyuncs.com/",
+    "dur": 956,
+    "transfer": 0,
+    "enc": 85,
+    "status": 200,
+    "proto": "",
+    "init": "xmlhttprequest"
+   },
+   {
+    "name": "https://upload.captcha-open.aliyuncs.com/",
+    "dur": 4985,
+    "transfer": 0,
+    "enc": 37,
+    "status": 200,
+    "proto": "",
+    "init": "xmlhttprequest"
+   }
+  ],
+  "sentParamLen": 6307,
+  "alerts": [],
+  "trusted": true
+ }
+}

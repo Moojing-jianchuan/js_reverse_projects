@@ -1,0 +1,12 @@
+{
+ "CertifyId": "JlfgTZcxyb",
+ "Message": "success",
+ "RequestId": "B31F69FE-B895-43DD-9873-F5F2402DBFA5",
+ "Image": "qst/PUZZLE/online/915/dc0197f4-47c9-435f-bdbf-02ec7bd7ad0a/back.png",
+ "Code": "Success",
+ "LimitFlow": false,
+ "Success": true,
+ "StaticPath": "3.29.0/pe.060.dbe62701bae12a85",
+ "CaptchaType": "PUZZLE",
+ "PuzzleImage": "qst/PUZZLE/online/915/dc0197f4-47c9-435f-bdbf-02ec7bd7ad0a/shadow.png"
+}

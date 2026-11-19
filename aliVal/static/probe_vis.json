@@ -1,0 +1,42 @@
+{
+ "vis": "visible",
+ "hidden": false,
+ "focus": true,
+ "innerW": 1266,
+ "innerH": 977,
+ "screenX": 3,
+ "screenY": 3,
+ "outerW": 1280,
+ "outerH": 1040,
+ "elRect": [
+  633,
+  488,
+  0,
+  0
+ ],
+ "hasIO": "function",
+ "hasRO": "function",
+ "res": [
+  {
+   "n": "AliyunCaptcha.js",
+   "dur": 2740,
+   "size": 300,
+   "status": null,
+   "init": "script"
+  },
+  {
+   "n": "",
+   "dur": 1876,
+   "size": 0,
+   "status": 200,
+   "init": "xmlhttprequest"
+  },
+  {
+   "n": "",
+   "dur": 2809,
+   "size": 0,
+   "status": 200,
+   "init": "xmlhttprequest"
+  }
+ ]
+}

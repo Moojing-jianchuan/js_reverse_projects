@@ -1,0 +1,23 @@
+{
+ "post": 9,
+ "tag": "P8-closed-loop",
+ "tookMs": 329,
+ "capturedAt": "2026-11-13T19:28:00",
+ "postedAt": "2026-11-13T11:28:03.289Z",
+ "ageSeconds": 3.3,
+ "req": {
+  "certifyId": "Bu81RaNcWE",
+  "sceneId": "vollz84f",
+  "deviceToken_len": 1332,
+  "deviceToken_head": "V0VCI2FiMDM0ZWMwNjQz",
+  "data_len": 992,
+  "data_head16": "JRMnfXEhGi82eQ4X"
+ },
+ "status": 200,
+ "respBody": "{\"captchaVerifyResult\":false,\"bizResult\":false}",
+ "respParsed": {
+  "captchaVerifyResult": false,
+  "bizResult": false
+ },
+ "verdict": false
+}

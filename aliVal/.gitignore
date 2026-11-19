@@ -1,0 +1,11 @@
+# 依赖
+node_modules/
+static/node/node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# 日志与临时产物
+*.log
+*.tmp
