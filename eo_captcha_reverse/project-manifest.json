@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "versions": {
+    "skill": "3.14.0",
+    "mcp": "1.11.1",
+    "browser": "whitenightshadow/152.0.4-beta.30-reverse.5"
+  },
+  "files": {
+    "scripts/tdc.js": "15f8e75f494c5346e49252642fca1e35d9ea7cfa8764152534b78764be4e10f6",
+    "samples/browser_tdc.js": "0f108f0125ba000c8f16eb30886308e1e831edd86e8dd5082741c9953fd36d15",
+    "scripts/widget-ele.js": "e2403ae1dad9fd12693c2844ab46dd71c0a4c7cafd6250cf10333323f0db7cab",
+    "scripts/eo-frame.js": "d10de84c402ad515d5425c6fc738dab1e58f323ef8a2224b7b3ca136d541c832",
+    "scripts/TEOCaptchaWidget.js": "845136af77764b6ee0b957607ba6e861809b4b1d13dab1d8cf8fc94059207d82"
+  },
+  "identities": {
+    "site": "51cto-eo-captcha",
+    "appid": "25199668"
+  }
+}

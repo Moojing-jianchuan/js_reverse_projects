@@ -1,0 +1,30 @@
+{
+  "url": "https://captcha.eo.qq.com/cap_union_prehandle?aid=25199668&protocol=https&accver=1&showtype=inline&ua=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NDsgcnY6MTUyLjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTUyLjA%3D&noheader=1&fb=1&aged=0&enableAged=0&enableDarkMode=0&deviceID=3286371761&uuid=16641332855890325902&size=normal&sid=1106021005&grayscale=1&dyeid=0&clientype=2&cap_cd=&uid=&lang=en&entry_url=https%3A%2F%2Fblog.51cto.com%2Fu_16213614%2F14723924&elder_captcha=0&js=%2Ftcaptcha-widget-eo-frame.8cc727d7.js&login_appid=&support_media=jpeg%2Cpng%2Cgif%2Cwebp%2Cmp4%2Cwebm&wb=1&version=1.1.0&enc_ua=1&kid=1&ec_pub=2f0Mu9Pl9WdVbOKQH2kirb30Da2OnWT5nD0n%2ByasYRY%3D&enc_ok=c1&subsid=1&callback=_aq_809158&sess=",
+  "method": "GET",
+  "status": 200,
+  "requestHeaders": {
+    "host": "captcha.eo.qq.com",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "sec-fetch-storage-access": "none",
+    "connection": "keep-alive",
+    "referer": "https://blog.51cto.com/",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "responseHeaders": {
+    "content-type": "text/javascript;charset=utf-8",
+    "p3p": "CP=CAO PSA OUR",
+    "pragma": "No-cache",
+    "server": "Trpc httpd, tencent http server",
+    "content-encoding": "gzip",
+    "date": "Wed, 18 Nov 2026 04:19:22 GMT",
+    "eo-log-uuid": "6154314194842000630",
+    "eo-cache-status": "MISS",
+    "x-firefox-spdy": "h2"
+  },
+  "postData": null
+}

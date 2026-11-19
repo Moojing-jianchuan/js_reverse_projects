@@ -1,0 +1,27 @@
+# 依赖
+node_modules/
+
+# 反汇编 / 字节码中间产物（单文件 1.6~1.9 MB × 6，不下发）
+src/_vmp/
+*.disasm.ins.json
+*.folded.js
+
+# 抓包与实验样本：只保留少量代表性样本，其余留在本地归档
+samples/archive/
+samples/builds/
+samples/capture2.json
+samples/capture10.json
+
+# 一次性探针脚本（保留在本地，进 experiments/ 即可复现）
+experiments/
+
+# 与本次逆向无关的协作文档（MCP / DSH 改造需求，不进这个仓库）
+src/MCP_P0_SPEC.md
+src/DSH_PLUGIN_SPEC.md
+src/MCP_UPGRADE_PROPOSAL.md
+src/FORWARD_TO_30989533.md
+
+# 运行时产物
+runs/
+*.log
+online_target.html

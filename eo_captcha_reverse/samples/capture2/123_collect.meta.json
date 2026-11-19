@@ -1,0 +1,31 @@
+{
+  "url": "https://t.captcha.qq.com/traceguard/api/collect",
+  "method": "POST",
+  "status": 200,
+  "requestHeaders": {
+    "host": "t.captcha.qq.com",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "content-type": "application/json",
+    "content-length": "1511",
+    "origin": "https://blog.51cto.com",
+    "sec-fetch-storage-access": "none",
+    "connection": "keep-alive",
+    "referer": "https://blog.51cto.com/",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "responseHeaders": {
+    "date": "Wed, 18 Nov 2026 04:19:23 GMT",
+    "content-type": "application/json",
+    "content-length": "381",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "https://blog.51cto.com",
+    "vary": "Origin"
+  },
+  "postData": "{\"site_id\":\"challenge-.51cto.com\",\"client_id\":\"12102da2-c592-4a28-aed2-9f5a551daae6\",\"session_id\":\"3c4174d4-cd11-47c6-b771-3ab361b50ba3\",\"seq\":1,\"ts\":1794975563752,\"page_url\":\"https://blog.51cto.com/u_16213614/14723924\",\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0\",\"behavior_v\":2,\"behavior\":{\"v\":2,\"ptr\":{\"pt\":0,\"l\":[],\"tr\":false},\"key\":{\"t\":[]},\"key_count\":0,\"focus\":{\"t\":[]},\"focus_changes\":0,\"vis\":{\"vH\":0,\"vV\":0,\"vC\":0,\"fO\":0,\"fI\":0},\"cb\":{\"cC\":0,\"xC\":0,\"pC\":0,\"sC\":0,\"cL\":[],\"ts\":[]},\"n\":{\"t\":[{\"p\":\"/u_16213614/14723924\",\"t\":\"fbd4d5cafbd4d5ca00000000330ec4e6\",\"nT\":\"navigate\",\"r\":\"\",\"ts\":10007,\"dw\":0}]},\"seq_dropped\":{\"ptr\":0,\"key\":0,\"focus\":0,\"cb_ts\":0,\"cb_lens\":0,\"n\":0},\"points\":[],\"click_points\":[],\"mouse_move_count\":0,\"click_count\":0,\"scroll_count\":0,\"touch_count\":0,\"browser_signals\":{\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0\",\"user_agent_data\":null,\"webdriver\":false,\"plugins_count\":5,\"mime_types_count\":2,\"languages_count\":2,\"platform\":\"Win32\",\"languages\":[\"en-US\",\"en\"],\"timezone\":\"Asia/Shanghai\",\"hardware_concurrency\":32,\"device_memory\":null,\"cookie_enabled\":true,\"has_chrome_object\":false,\"outer_width\":1295,\"outer_height\":687,\"inner_width\":1281,\"inner_height\":624,\"screen\":{\"width\":1366,\"height\":768,\"avail_width\":1366,\"avail_height\":720,\"color_depth\":24,\"pixel_depth\":24,\"device_pixel_ratio\":1.25},\"document_referrer\":\"\",\"automation_globals\":[]},\"context\":{\"eo_uuid\":\"16641332855890325902\"}}}"
+}

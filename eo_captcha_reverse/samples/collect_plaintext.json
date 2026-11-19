@@ -1,0 +1,290 @@
+{
+ "cd": [
+  "",
+  1794985154,
+  [
+   "PDF Viewer",
+   "Chrome PDF Viewer",
+   "Chromium PDF Viewer",
+   "Microsoft Edge PDF Viewer",
+   "WebKit built-in PDF"
+  ],
+  "https://captcha.eo.qq.com|https://captcha.eo.gtimg.com/static",
+  [],
+  [
+   {
+    "codec": "AAC",
+    "support": "probably"
+   },
+   {
+    "codec": "MP3",
+    "support": "maybe"
+   },
+   {
+    "codec": "Ogg Vorbis",
+    "support": "probably"
+   },
+   {
+    "codec": "Ogg Opus",
+    "support": "probably"
+   },
+   {
+    "codec": "WAV",
+    "support": "probably"
+   },
+   {
+    "codec": "FLAC",
+    "support": "maybe"
+   },
+   {
+    "codec": "WebM Vorbis",
+    "support": "probably"
+   },
+   {
+    "codec": "WebM Opus",
+    "support": "probably"
+   },
+   {
+    "codec": "M4A",
+    "support": "maybe"
+   }
+  ],
+  134276618,
+  "https://blog.51cto.com/u_16213614/14723924",
+  0,
+  1152,
+  "",
+  "CSS1Compat",
+  "2048-1152-1104-24-*-*-|-*",
+  0,
+  null,
+  1,
+  "Win32",
+  1,
+  1,
+  {
+   "_state": 0,
+   "nt_vc_output": {
+    "ac-baseLatency": 0,
+    "ac-outputLatency": 0,
+    "ac-sampleRate": 48000,
+    "ac-maxChannelCount": 2,
+    "ac-numberOfInputs": 1,
+    "ac-numberOfOutputs": 0,
+    "ac-channelCount": 2,
+    "ac-channelCountMode": "explicit",
+    "ac-channelInterpretation": "speakers",
+    "an-fftSize": 2048,
+    "an-frequencyBinCount": 1024,
+    "an-minDecibels": -100,
+    "an-maxDecibels": -30,
+    "an-smoothingTimeConstant": 0.8,
+    "an-numberOfInputs": 1,
+    "an-numberOfOutputs": 1,
+    "an-channelCount": 2,
+    "an-channelCountMode": "max",
+    "an-channelInterpretation": "speakers"
+   },
+   "pxi_output": 0
+  },
+  0,
+  null,
+  767,
+  2,
+  "srgb",
+  2,
+  "GgoAAAANSUhEUgAAASwAAACWCAYAAAgRKZCZh/eGMYpycTTB+tfyVrlmt9gRcwNURENsHof0oAAAAASUVORK5CYII=",
+  "UTF-8",
+  1794985173,
+  0,
+  "1;3615235804",
+  "",
+  {
+   "sheets": 4,
+   "rules": 194
+  },
+  [
+   330,
+   70
+  ],
+  0,
+  [],
+  [
+   [
+    4,
+    140,
+    212.8000030517578,
+    1794985154922,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  [
+   {
+    "codec": "H.264",
+    "support": "probably"
+   },
+   {
+    "codec": "H.264 High",
+    "support": "probably"
+   },
+   {
+    "codec": "H.265/HEVC",
+    "support": ""
+   },
+   {
+    "codec": "VP8",
+    "support": "probably"
+   },
+   {
+    "codec": "VP9",
+    "support": "probably"
+   },
+   {
+    "codec": "AV1",
+    "support": "probably"
+   },
+   {
+    "codec": "Theora",
+    "support": ""
+   },
+   {
+    "codec": "MPEG-4",
+    "support": ""
+   }
+  ],
+  [
+   "en-US",
+   "en"
+  ],
+  {
+   "_state": -2
+  },
+  [
+   "application/pdf",
+   "text/pdf"
+  ],
+  5,
+  {
+   "_state": 0,
+   "quota": 10737418240,
+   "usage": 16414,
+   "usageDetails": null
+  },
+  {
+   "_state": 0,
+   "canvas": "f1b34814bb75d050604ee5ea580cf123a1b3a648c80cbb6ef3ce3f1345e8afa1",
+   "audio": "e9958f485a018b09f2ef48d9190f78c91a7799b7ae3d85beb014ca8af78ea8a6"
+  },
+  2048,
+  "iframe",
+  [],
+  {
+   "count": 0,
+   "items": []
+  },
+  {
+   "_state": -2
+  },
+  1,
+  "+08",
+  "ANGLE (NVIDIA, NVIDIA GeForce GTX 980 Direct3D11 vs_5_0 ps_5_0), or similar",
+  "5.0 (Windows)",
+  1,
+  "windows",
+  {
+   "x": -9999,
+   "y": -9999,
+   "w": 100,
+   "h": 100,
+   "ol": -9999,
+   "ot": -9999,
+   "ow": 100,
+   "oh": 100
+  },
+  "Y3VzdG9tMw==",
+  32,
+  {
+   "_state": 0,
+   "timeZone": "Asia/Shanghai",
+   "calendar": "gregory",
+   "numberingSystem": "latn",
+   "locale": "en"
+  },
+  0.9560000896453857,
+  24,
+  "Google Inc. (NVIDIA)",
+  "98k",
+  0,
+  "https://captcha.eo.gtimg.com/static/template/widget_ele_eo.e349d149.html?rand=1519713624347",
+  "",
+  0,
+  {
+   "_state": -1,
+   "brands": [],
+   "mobile": null,
+   "platform": ""
+  },
+  509009119,
+  1794983639,
+  "Arial,Arial Black,Arial Narrow,Courier New,Georgia,Impact,Times New Roman,Trebuchet MS,Verdana,Helvetica,Tahoma,Comic Sans MS,Candara,Consolas,Lucida Console,Lucida Sans Unicode,Segoe UI,Microsoft YaHei,SimSun,SimSun-ExtB,Microsoft JhengHei",
+  1.25,
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0"
+ ],
+ "sd": {
+  "od": "C",
+  "mathFingerprint": {
+   "tanh0x": {
+    "0.5": {
+     "value": 0.46211715726000974,
+     "os": "unknown"
+    },
+    "0.7": {
+     "value": 0.6043677771171636,
+     "os": "unknown"
+    },
+    "0.8": {
+     "value": 0.6640367702678491,
+     "os": "unknown"
+    },
+    "0.9": {
+     "value": 0.7162978701990245,
+     "os": "unknown"
+    }
+   },
+   "os": "unknown"
+  },
+  "fpBio": {
+   "v": 1,
+   "cw": 1,
+   "ce": {
+    "s": 0,
+    "h": "f3d9196edd02319c",
+    "p": 5112
+   },
+   "gp": {
+    "s": 0,
+    "sp": "2a9ece8f78bd7689",
+    "px": "2687c95a8bc42c5c"
+   },
+   "af": {
+    "s": 0,
+    "sum": 37.026783,
+    "h": "74ebc3f50b99d8ff"
+   }
+  },
+  "ep": {
+   "v": 1,
+   "m": 8,
+   "d": 0,
+   "k": 282
+  },
+  "tdc_perf": {
+   "fi": 147,
+   "pi": 113,
+   "gd": 142
+  }
+ }
+}

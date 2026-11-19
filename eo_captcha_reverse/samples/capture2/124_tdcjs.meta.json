@@ -1,0 +1,29 @@
+{
+  "url": "https://captcha.eo.qq.com/tdc.js?app_data=7528673180927373312&t=1029632488&appid=25199668&js_data=d04mYrwta2ErAWTNy5r9OOaNxwUQCc3dA0BJ2qBXBqzrpPrFUnBwBkCaO-N8kpkuQTi9JF3FJs6QF12l2f75P2gGqM7gdS7912l_6577wO-_nDyHr6MKandroazL5BuYz3kGq96w-aB1XDA3mubcLRHXQ**&a=b",
+  "method": "GET",
+  "status": 200,
+  "requestHeaders": {
+    "host": "captcha.eo.qq.com",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "sec-fetch-storage-access": "none",
+    "connection": "keep-alive",
+    "referer": "https://captcha.eo.gtimg.com/",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "responseHeaders": {
+    "content-type": "text/javascript",
+    "server": "Trpc httpd",
+    "content-encoding": "gzip",
+    "content-length": "142128",
+    "date": "Wed, 18 Nov 2026 04:19:23 GMT",
+    "eo-log-uuid": "15784360171623520325",
+    "eo-cache-status": "MISS",
+    "x-firefox-spdy": "h2"
+  },
+  "postData": null
+}

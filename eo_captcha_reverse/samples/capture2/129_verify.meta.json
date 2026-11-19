@@ -1,0 +1,19 @@
+{
+  "url": "https://captcha.eo.qq.com/cap_monitor?appid=25199668&sid=1106021005&log_mode=monitor&client=Firefox&platform=Windows&data={%22is_sampled%22:0,%22is_preload%22:0,%22is_visible%22:1,%22speed_list%22:[{%22name%22:%22captcha.eo.qq.com/cap_union_new_verify%22,%22duration%22:857}]}",
+  "method": "GET",
+  "requestHeaders": {
+    "host": "captcha.eo.qq.com",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "accept": "image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5",
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "sec-fetch-storage-access": "none",
+    "connection": "keep-alive",
+    "referer": "https://captcha.eo.gtimg.com/",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "responseHeaders": null,
+  "postData": null
+}

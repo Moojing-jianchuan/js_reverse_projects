@@ -1,0 +1,16 @@
+{
+  "name": "eo_captcha_reverse",
+  "version": "1.0.0",
+  "description": "目标站点：`https://blog.51cto.com/u_16213614/14723924`（访问时由 EdgeOne 拦截并下发腾讯天御 TEOCaptcha 复选框校验） 工作目录：`D:\\ds_work\\js_reverse_projects\\eo_captcha_reverse` 取证工具：`camoufox-reverse` MCP（Camoufox 152 / Mozilla 内核） 方法论：`hello-js-reverse-skill`（先定义成功层级、控制组、单变量实验、结论带边界）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.1.1"
+  }
+}

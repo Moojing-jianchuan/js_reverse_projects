@@ -1,0 +1,85 @@
+{
+  "steps": {
+    "kdf": {
+      "serverPub": "c855b6f4e1a75920a818df194530583ba6c3034e289402ac0249f43f4185e717",
+      "info": "hundun2|c1",
+      "match": true
+    },
+    "openPrehandleBlob": {
+      "ok": true,
+      "armor": {
+        "enc": "c1",
+        "S_len": 44,
+        "nonce": "vhYiga3ydpYhbNnZ"
+      }
+    },
+    "sealVerifyPayload": {
+      "fields": [
+        "collect",
+        "tlg",
+        "eks",
+        "sess",
+        "deviceID",
+        "payload"
+      ],
+      "sealed": {
+        "sess": "s1v33fDDw71PuG17nFqv1ZgUxAO_TdXZSQsDFwDUM_c",
+        "nonce": "vhYiga3ydpYhbNnZ",
+        "ts": 1794977362,
+        "ans": "[{\"elem_id\":0,\"type\":\"DynAnswerType_TIME\",\"data\":\"\"}]",
+        "pow_answer": "3bd2e95f386414c4#3401",
+        "pow_calc_time": 8
+      },
+      "wireBytes": 252,
+      "aad": "none"
+    },
+    "sample": [
+      {
+        "file": "prehandle_c1.json",
+        "hasEcPub": true,
+        "hasEncOk": true,
+        "prehandleDataHasBlob": false,
+        "postFields": []
+      },
+      {
+        "file": "prehandle_c2.json",
+        "hasEcPub": true,
+        "hasEncOk": true,
+        "prehandleDataHasBlob": false,
+        "postFields": []
+      },
+      {
+        "file": "verify_c1.json",
+        "hasEcPub": false,
+        "hasEncOk": false,
+        "prehandleDataHasBlob": false,
+        "postFields": [
+          "collect",
+          "tlg",
+          "eks",
+          "sess",
+          "ans",
+          "deviceID",
+          "pow_answer",
+          "pow_calc_time"
+        ]
+      },
+      {
+        "file": "verify_c2.json",
+        "hasEcPub": false,
+        "hasEncOk": false,
+        "prehandleDataHasBlob": false,
+        "postFields": [
+          "collect",
+          "tlg",
+          "eks",
+          "sess",
+          "ans",
+          "deviceID",
+          "pow_answer",
+          "pow_calc_time"
+        ]
+      }
+    ]
+  }
+}

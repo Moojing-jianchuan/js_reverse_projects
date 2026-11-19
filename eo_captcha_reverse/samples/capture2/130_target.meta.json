@@ -1,0 +1,37 @@
+{
+  "url": "https://blog.51cto.com/u_16213614/14723924",
+  "method": "GET",
+  "status": 200,
+  "requestHeaders": {
+    "host": "blog.51cto.com",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "connection": "keep-alive",
+    "referer": "https://blog.51cto.com/u_16213614/14723924",
+    "cookie": "__tg_ctx=v1.k1.IOh-TV5cwzyA4oMd8xLRK7Cz1EAb8KEkNSmRDJQkUE0DhG6D0n3s1myfQOysBGtVC9ZIGGmcHJHGQUVRljyauTP8ydsj0kg6-xLqSn2LLGqc73UdSslLBgADTUHs3bIgm1rIo9Rp-H3X4tkGHY1HocILSRH8e3ExOnZJ5NuR-7S9wpdTMbSBIuokR4FFVgqLbyINOA9DLAJBcSLDk17Uzbxaqt3k2SujbENgmkmkse6JvhWu; EO-Bot-Captcha-Token=t04S1f8mQ_fB_kIkkdSWziIooU0H1VnRA819MR0yUM-gKDZ9k33ESCew1sB7ctEon58JgRIkTM_AiFJsqwqE-IjTejkgOPtPW6ho_cwKiAQEQNBCzw5FZDHTuPGl2vZehAxFZTS4axQk6zzIHwCLCQy5IP5boWbwcjUntE0gr2WgEFCCcsDRElbsPII2dfPhAo8trT1_HXNMEF8P6AbptSQJJiQ6iaKA-pHCK1Cunf83ONubN5LyYb4Fbof9J4eYdlqMS7CjON8h_KH-uL7aemqDrv154uePdULBD9GvK9MxIvBlDxSAJoFzmaE0zvl0gLght76IVW5xIIUuFbh7j717QEYiAX_DlYDH56XgKv5pcIKNEHcGjShbH2kOEeEgpZsfnjfLWVQxnKJNvKT02jgSz189fcVp-T6bgFmrGlmckBYVFNnCPO_zLJQ14-QaecEZZtWrvJep-o*",
+    "upgrade-insecure-requests": "1",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1"
+  },
+  "responseHeaders": {
+    "content-type": "text/html; charset=UTF-8",
+    "server": "nginx/1.16.0",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "pragma": "no-cache",
+    "set-cookie": "PHPSESSID=j6gvg0vlo6hsaof7rvin3lud2n; path=/; HttpOnly\npub_sauth1=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.51cto.com\npub_sauth2=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.51cto.com\npub_sauth3=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.51cto.com; HttpOnly\n_csrf=8570ac7e59971277fd9358506afd7b159873552ef9239679f7aa82bf7f1a1624a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A0%DC6%80Fh%BERO%C7%04A%EE%DE%EE%F2%F9%0A9%A8%B1%87z%92%E7%F2%F2%D1%05%F4%1D%DF%22%3B%7D; path=/; HttpOnly",
+    "load-balancing": "blog",
+    "origin-agent-cluster": "?0",
+    "content-encoding": "gzip",
+    "cache-control": "must-revalidate, no-cache, no-store",
+    "accept-ranges": "bytes",
+    "date": "Wed, 18 Nov 2026 04:19:39 GMT",
+    "eo-log-uuid": "1899435519650941782",
+    "eo-cache-status": "MISS",
+    "x-firefox-spdy": "h2"
+  },
+  "postData": null
+}

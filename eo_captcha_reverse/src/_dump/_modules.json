@@ -1,0 +1,20 @@
+[
+  {
+    "file": "scripts/widget-ele.js",
+    "name": "widget",
+    "moduleStart": 118599,
+    "bodyEnd": 157282,
+    "bodyLen": 38667,
+    "x25519": false,
+    "path": "D:/ds_work/js_reverse_projects/eo_captcha_reverse/src/_dump/widget_armormod_118599.js"
+  },
+  {
+    "file": "scripts/eo-frame.js",
+    "name": "eoframe",
+    "moduleStart": 121299,
+    "bodyEnd": 187354,
+    "bodyLen": 66039,
+    "x25519": true,
+    "path": "D:/ds_work/js_reverse_projects/eo_captcha_reverse/src/_dump/eoframe_armormod_121299.js"
+  }
+]
