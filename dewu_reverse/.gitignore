@@ -1,0 +1,16 @@
+# ── 会话凭据 / 抓包样本（含真实 sk、sessionid、请求头，绝不入库）──
+config/
+artifacts/
+data/
+
+# ── 站点资产（体积大、非本项目版权，可用 scripts 重新抓）──
+artifacts/js/
+artifacts/unpacked/
+artifacts/env_baseline/
+artifacts/captcha_dump/
+
+# ── 依赖与缓存 ──
+node_modules/
+__pycache__/
+*.pyc
+venv/

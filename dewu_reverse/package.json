@@ -1,0 +1,17 @@
+{
+  "name": "dewu_reverse",
+  "version": "1.0.0",
+  "description": "目标接口：`POST https://app.dewu.com/api/v1/h5/commodity-pick-interfaces/pc/pick-rule-result/feeds/info` （首页商品流，`category-pick/mapping` 提供品类与 pickRuleId）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "jsdom": "^29.1.1",
+    "sharp": "^0.35.5"
+  }
+}
